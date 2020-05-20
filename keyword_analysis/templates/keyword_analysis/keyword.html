@@ -183,14 +183,13 @@
 
           <div style="width: 40%;float: right;" class="row">
             <form action='{% url "form" %}' method="get">
-              <p>플랫폼: {{ form.platform }}</p>
+              {{ form.}}
+              <p>플랫폼: {{ form.platform }} </p>
               <p>장르: {{ form.genre }}</p>
-              <p>기간: {{ form.term}} </p>
+              <p>기간: {{ form.term }} </p>
                 <input type="submit" value="제출">
             </form>
-            {% if day_result %}
-              {{ day_result}}
-            {% endif %}
+            <img src='{% static "wordcloud.png" %}'>
           </div> 
 
       <!--
@@ -279,7 +278,6 @@
         <!-- /.container-fluid -->
       </div>
       <!-- End of Main Content -->
-
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">

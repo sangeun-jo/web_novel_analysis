@@ -19,4 +19,4 @@ class UserForm(forms.Form):
 class optionForm(forms.Form):
     platform= forms.CharField(max_length=10, widget=forms.Select(choices=PLATFORM_CHOICES))
     genre = forms.CharField(max_length=10, widget=forms.Select(choices=GENRE_CHOICES))
-    term = forms.CharField(max_length=5, widget=forms.Select(choices=TERM_CHOICES))
+    term = forms.CharField(max_length=5, widget=forms.Select(choices=TERM_CHOICES), initial='_1month')
