@@ -170,17 +170,50 @@
               <a style='margin-top: 12px; float:right;' href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
          
           </div>
-          <!-- Content Row -->
-          <div style="margin-top: -20px" class="row">
-            <form action='{% url "search" %}' method="get"> 
+
+          <div style="width: 40%;float: left;" class="row">
+            <form action='{% url "search" %}' method="post">{% csrf_token %}
                 <input type="text" name='q' value="{{ q }}">
                 <input type="submit" value="검색">
             </form>
+            {% if search_result %}
+              {{search_result}}
+            {% endif %}
           </div>  
+
+          <div style="width: 40%;float: right;" class="row">
+            <form action='{% url "form" %}' method="get">
+              <p>플랫폼: {{ form.platform }}</p>
+              <p>장르: {{ form.genre }}</p>
+              <p>기간: {{ form.term}} </p>
+                <input type="submit" value="제출">
+            </form>
+            {% if day_result %}
+              {{ day_result}}
+            {% endif %}
+          </div> 
+
+      <!--
+          <div style="width: 40%;float: right;" class="row">
+            <form action='{% url "form" %}' method="get">
+              {{ form | linebreaks }}
+                <input type="submit" value="제출">
+            }
+            }
+            </form>
+            <table>
+              <td>이름: {{ form_result.first_name.value }}</td>
+              <td>성: {{ form_result.last_name.value }}</td>
+              <td>이메일: {{ form_result.email.value }}</td>
+              <td>나이: {{ form_result.age.value }}</td>
+              <td>날짜: {{ form_result.todays_date.value }}</td>
+            </table>
+          </div> 
+      -->    
 <!--
           <div class="row">
 
-            
+            <form>
               <div style="width: 10%" >
                 플랫폼
                 <select>
@@ -236,18 +269,13 @@
               <div style="width: 10">
                 <button>분석 시작</button>
               </div>
-
+            </form>
           </div>  
-            -->
-          <div class="row">
-            여기에 결과가 나타날 것임. 
-            {% if search_result %}
-              {{search_result}}
-
-            {% endif %}
-          </div>
+-->
+          
 
         </div>
+
         <!-- /.container-fluid -->
       </div>
       <!-- End of Main Content -->
