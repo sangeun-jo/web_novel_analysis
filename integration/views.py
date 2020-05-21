@@ -3,6 +3,7 @@ from joara.models import TodayBest
 from .forms import optionForm
 from web_novel_analysis.base import pie_graph
 from web_novel_analysis.base import wordcloud, get_tags
+from web_novel_analysis.base import bar_graph
 from web_novel_analysis.base import todays_date
 from web_novel_analysis.base import search
 
@@ -12,7 +13,8 @@ def main(request):
 	qs = TodayBest.objects.all()
 	defalt_wc = wordcloud(qs)
 	defalt_pie = pie_graph(qs)
-	return render(request, 'integration/integration.html', {'form':form, 'wordcloud': defalt_wc, 'pie_graph':defalt_pie})
+	defalt_bar = bar_graph(qs)
+	return render(request, 'integration/integration.html', {'form':form, 'wordcloud': defalt_wc, 'pie_graph':defalt_pie, 'bar_graph':defalt_bar})
 
 def result(request):
 	#조아라 데이터 구하기
@@ -23,4 +25,5 @@ def result(request):
 		qs = qs.filter(date__icontains=date)
 		_wc = wordcloud(qs)
 		_pie = pie_graph(qs)
-	return render(request, 'integration/integration.html', {'wordcloud': _wc, 'pie_graph':_pie, 'platform':form.data['platform'], 'genre':form.data['genre'], 'term':form.data['term']})
+		_bar = bar_graph(qs)
+	return render(request, 'integration/integration.html', {'wordcloud': _wc, 'pie_graph':_pie,  'bar_graph':_bar, 'platform':form.data['platform'], 'genre':form.data['genre'], 'term':form.data['term']})

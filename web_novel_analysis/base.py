@@ -19,17 +19,23 @@ def search(request):
 		qs = qs.filter(title__icontains=q)
 	return render(request, 'integration/integration.html', {'search_result':qs})
 
-def get_tags(text, ntags=100): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
-    spliter = Twitter()
-    nouns = spliter.nouns(text)
-    nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
-    count = Counter(nouns)
-    return_list = {}
-    for n, c in count.most_common(ntags):
-        if n == '표지' or n == '소설':
-            continue
-        return_list[n] = c
-    return return_list
+#쿼리셋 주면 데이터 전처리해서 단어 개수 세어줌 
+def get_tags(qs, ntags=50): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
+	kor_eng = re.compile('[^ a-zA-Zㄱ-ㅣ가-힣]+') #한글, 영어만 추출 
+	txt = ''
+	for nov in qs:
+		txt = txt + ' ' + nov.title + ' ' + nov.intro
+	cleaned_text = kor_eng.sub(' ', txt)
+	spliter = Twitter()
+	nouns = spliter.nouns(cleaned_text)
+	nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
+	count = Counter(nouns)
+	return_list = {}
+	for n, c in count.most_common(ntags):
+		if n == '표지' or n == '소설':
+			continue
+		return_list[n] = c
+	return return_list
 
 def pie_graph(qs):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
@@ -63,20 +69,16 @@ def pie_graph(qs):
 	return image_64
 
 def wordcloud(qs):
-	kor_eng = re.compile('[^ a-zA-Zㄱ-ㅣ가-힣]+') #한글, 영어만 추출 
-	wc = WordCloud(font_path='C:/Windows/Fonts/mb.ttf', 
+	wc = WordCloud(font_path='C:/Windows/Fonts/malgun.ttf', 
             background_color='white', 
             width=900, 
             height=360, 
             max_words=100, 
-            max_font_size=200)
-	txt = ''
-	for nov in qs:
-		txt = txt + ' ' + nov.title + ' ' + nov.intro
-	cleaned_text = kor_eng.sub(' ', txt)
-	keyword = get_tags(cleaned_text)
+            max_font_size=200, 
+    	)
+
+	keyword = get_tags(qs)
 	wc_img = wc.generate_from_frequencies(keyword)
-	#wc_img.to_file('D:/ProjectFiles/gradualation/Django/web_novel_analysis/static/img/wordcloud.png')
 	plt.figure(figsize=(20, 6))
 	plt.imshow(wc_img, interpolation='bilinear')
 	plt.axis("off")
@@ -94,3 +96,26 @@ def todays_date():
 	day = str(now.tm_mday)
 	date = year+month+day
 	return date 
+
+def bar_graph(qs):
+	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
+	rc('font', family=font_name, size=8)
+	plt.figure(figsize=(6.1, 3.6))
+	keyword = get_tags(qs, 20)
+	values = []
+	keys = [] 
+	for key in keyword.keys():
+		keys.append(key)
+		values.append(keyword[key])
+	plt.bar(range(len(values)), values)
+	#plt.xlabel('인기 키워드')
+	#plt.ylabel('빈도수')
+	plt.xticks(range(len(keys)),keys, rotation=40)
+	plt.bar(range(len(values)), values)
+	#plt.axis("off")
+	image = io.BytesIO()
+	plt.savefig(image, format='png', bbox_inches='tight', pad_inches=0.1)
+	image.seek(0)  
+	string = base64.b64encode(image.read())
+	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
+	return image_64

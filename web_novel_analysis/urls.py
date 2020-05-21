@@ -21,6 +21,5 @@ urlpatterns = [
     url(r'^$', views.home), 
 	url(r'^integration/', include('integration.urls')), 
 	url(r'^joara/', include('joara.urls'), name='joara'), 
-    url(r'^keyword/', include('keyword_analysis.urls'), name='keyword'), 
     url(r'^admin/', admin.site.urls),
 ]
