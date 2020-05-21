@@ -119,7 +119,7 @@
       <!-- Main Content -->
       <div id="content">
 
-        <!-- Topbar -->
+      <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
@@ -127,67 +127,67 @@
             <i class="fa fa-bars"></i>
           </button>
 
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
               </a>
-              <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
-                </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </li>
 
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            </li>
+
           </ul>
+
         </nav>
-
-        <!-- 기간 선택 메뉴 -->
-
-        
+        <!-- End of Topbar -->
 
         <div class="container-fluid">
+         
+          
+       <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Charts</h1>
+          <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme. The charts below have been customized - for further customization options, please visit the <a target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js documentation</a>.</p>
+
+<!--
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <div>
               <h1 class="h3 mb-2 text-gray-800"><b>투데이 베스트 분석</b></h1>
               <p class="mb-4">매일 자정 베스트 상위 20개 작품 장르, 제목, 소개글 3줄을 분석한 결과입니다. <a target="_blank" href="http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcategory=all">조아라 투데이 베스트 메뉴 바로가기</a></p> 
-            </div>
 
-            <div>
-              <a style='margin-top: 12px; float:right;' href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-              <nav style='float:right;margin-right:10px;' class="navbar navbar-expand navbar-light bg-light mb-4">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                기간별 분석</a>
-                    
-                  </li>
-                </ul>
-              </nav>
-            </div> 
-         
-          </div>
+-->
           <!-- Content Row -->
-          <div style='margin-top:-25px;' class="row">
-            <div class="col-xl-8 col-lg-7">
+          <div class="row">
+            <div class="col-xl-12 col-lg-1">
               <!-- Area Chart -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -215,32 +215,6 @@
                 </div>
               </div>
               --> 
-
-            </div>
-
-            <!-- Donut Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">인기작 장르 분석</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4">
-                    <img src='{% static "pie_graph.png" %}'>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <p class="mb-0 small">
-                      인기작 장르 통계입니다.     
-                    </p>
-                  </div>
-                  <hr>
-                  <div>
-                    1개월 간 인기작 장르 통계입니다.
-                  </div>
-                </div>
-              </div>
 
             </div>
 

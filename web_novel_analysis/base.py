@@ -1,8 +1,5 @@
 from django.shortcuts import render
 from joara.models import TodayBest
-from .forms import optionForm
-import time
-from wordcloud import WordCloud
 import re
 from konlpy.tag import Twitter
 from collections import Counter
@@ -10,13 +7,9 @@ import urllib, base64
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
 import io
-
-def main(request):
-	form = optionForm
-	#나중에 조아라 말고 플랫폼 전체 1개월 데이터로 워드 클라우드 만들기 
-	qs = TodayBest.objects.all()
-	defalt_wc = wordcloud(qs)
-	return render(request, 'keyword_analysis/keyword.html', {'form':form, 'wordcloud':defalt_wc})
+import requests
+import time
+from wordcloud import WordCloud
 
 def search(request):
 	#애도 전체 데이터로 구현하기
@@ -24,7 +17,7 @@ def search(request):
 	q = request.POST.get('q', '')
 	if q:
 		qs = qs.filter(title__icontains=q)
-	return render(request, 'keyword_analysis/keyword.html', {'search_result':qs})
+	return render(request, 'integration/integration.html', {'search_result':qs})
 
 def get_tags(text, ntags=100): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
     spliter = Twitter()
@@ -53,13 +46,12 @@ def pie_graph(qs):
 		genre = genre.replace('[', '')
 		genre = genre.replace(']', '')
 		group_name.append(genre)
-	plt.figure(2)
+	plt.figure(figsize=(3.5, 3))
 	plt.pie(group_size, 
 		labels=group_name, 
 		autopct='%1.2f%%', # second decimal place
 		shadow=True, 
-		startangle=90,
-		textprops={'fontsize': 9}) # text font size
+		textprops={'fontsize': 8}) # text font size
 	plt.axis('equal') #  equal length of X and Y axis
 	#plt.title('인기 장르', fontsize=20)
 	plt.axis("off")
@@ -85,7 +77,6 @@ def wordcloud(qs):
 	keyword = get_tags(cleaned_text)
 	wc_img = wc.generate_from_frequencies(keyword)
 	#wc_img.to_file('D:/ProjectFiles/gradualation/Django/web_novel_analysis/static/img/wordcloud.png')
-	plt.figure(1)
 	plt.figure(figsize=(20, 6))
 	plt.imshow(wc_img, interpolation='bilinear')
 	plt.axis("off")
@@ -103,14 +94,3 @@ def todays_date():
 	day = str(now.tm_mday)
 	date = year+month+day
 	return date 
-
-def result(request):
-	#조아라 데이터 구하기
-	qs = TodayBest.objects.all()
-	form = optionForm(request.GET)
-	if form.data['term'] == '1일':
-		date = todays_date()
-		qs = qs.filter(date__icontains=date)
-		_wc = wordcloud(qs)
-		_pie = pie_graph(qs)
-	return render(request, 'keyword_analysis/keyword.html', {'wordcloud':_wc, 'pie_graph':_pie, 'platform':form.data['platform'], 'genre':form.data['genre'], 'term':form.data['term']})

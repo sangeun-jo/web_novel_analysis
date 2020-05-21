@@ -10,6 +10,9 @@ import io
 import urllib, base64
 
 
+def keyword(request):
+	return(request, 'keyword_analysis/keyword.html')
+
 def get_tags(text, ntags=100): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
     spliter = Twitter()
     nouns = spliter.nouns(text)

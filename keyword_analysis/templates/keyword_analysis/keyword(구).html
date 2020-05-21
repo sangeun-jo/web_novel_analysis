@@ -57,8 +57,7 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-             <a class="collapse-item" href='{% url "keyword" %}' >키워드 분석</a>
-            <a class="collapse-item" href="utilities-border.html">인기작 장르 분석 </a>
+            <h6 class="collapse-header">작가님들을 위한 분석 도구</h6>
             <a class="collapse-item" href="utilities-color.html">댓글 반응 분석</a>
             <a class="collapse-item" href="utilities-border.html">인물 관계도 분석 </a>
           </div>
@@ -119,7 +118,7 @@
       <!-- Main Content -->
       <div id="content">
 
-      <!-- Topbar -->
+        <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
@@ -127,148 +126,104 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+            <div class="topbar-divider d-none d-sm-block"></div>
 
-            </li>
-  
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
             </li>
 
           </ul>
-
         </nav>
-        <!-- End of Topbar -->
+
+        <!-- 기간 선택 메뉴 -->
 
         <div class="container-fluid">
-
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <div style="width:40%;">
-            <h1 class="h3 mb-2 text-gray-800">플랫폼 트렌드 분석</h1>
+            <div>
+              <h1 class="h3 mb-2 text-gray-800"><b>키워드 분석</b></h1>
+              <p class="mb-4">어쩌구 저쩌구</a></p> 
             </div>
-            <div style="width:60%;">
+              <a style='margin-top: 12px; float:right;' href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+         
+          </div>
+
+      <!--
+          <div class="row">
+
+              <form action='{% url "search" %}' method="post">{% csrf_token %}
+                <input type="text" name='q' value="{{ q }}">
+                <input type="submit" value="검색">
+              </form>
+              <div>
+                {% if search_result %}
+                  {{search_result}}
+                {% endif %}
+              </div>
+          </div>
+       -->   
+
+          <div>
             <form action='{% url "form" %}' method="get">
-              <div style="float: left; margin-right: 10px;width: 25%;">
-                <div style="float: left;margin-right: 10px;"><p><b>플랫폼</b></p></div>
+              <div style="float: left; width: 35%;">
+                <div style="float: left; margin-right: 10px;"><p><b>플랫폼</b></p></div>
                   <div style="float: left">
-                    {{ form.platform }}
+                  {% for platform in form.platform %}
                     {{ platform }}
+                  {% endfor %}
                   </div>
                 </div>
-              <div style="float: left; margin-right: 10px;width: 25%;">
-                <div style="float: left;margin-right: 10px;"><p><b>장르</b></p></div>
+              <div style="float: left; width: 30%;">
+                <div style="float: left; margin-right: 10px;"><p><b>장르</b></p></div>
                   <div style="float: left;"> 
-                      {{ form.genre }}
+                    {% for genre in form.genre %}
                       {{ genre }}
+                    {% endfor %}
                   </div>
                 </div>
-              <div style="float: left; margin-right: 10px;width: 25%;">
-                <div style="float: left; margin-right: 10px;"><p><b>기간</b></p></div>
+              <div style="float: left; width: 20%;">
+                <div style="float: left;margin-right: 10px;"><p><b>기간</b></p></div>
                   <div style="float: left;">
                     {{ form.term }}
-                    {{ term }}
                   </div>
                 </div>
-              <div style="float: right; margin-right: 20px; width: 10%;">
-                <input type="submit" value="분석하기" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+              <div style="float: left; width: 15%;">
+                <input type="submit" value="분석하기">
               </div>
           </div> 
 
-          </div>
-       <!-- Page Heading -->
-
-         
-
-<!--
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-2 text-gray-800"><b>투데이 베스트 분석</b></h1>
-              <p class="mb-4">매일 자정 베스트 상위 20개 작품 장르, 제목, 소개글 3줄을 분석한 결과입니다. <a target="_blank" href="http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcategory=all">조아라 투데이 베스트 메뉴 바로가기</a></p> 
-          </div>
--->
-          <!-- Content Row -->
           <div class="row">
-            <div class="col-xl-12 col-lg-1">
-              <!-- Area Chart -->
-              <div class="card shadow mb-4"> 
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">키워드 분석</h6>
-                </div>
-                  <img src='{{ wordcloud }}'>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">인기 장르 분석</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <img src=''>
-                  </div>
-                  <hr>
-                  어쩌고 입니다.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-8 col-lg-7">
-              <!-- Area Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">어쩌고 분석</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <img src=''>
-                  </div>
-                  <hr>
-                  어쩌고 입니다.
-                </div>
-              </div>
-            </div>
+              <img src='{{ wordcloud }}'>
           </div>
 
         </div>
+
         <!-- /.container-fluid -->
       </div>
       <!-- End of Main Content -->
-
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">

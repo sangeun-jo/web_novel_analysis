@@ -19,8 +19,8 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.home), 
-	#url(r'^$', include('integration.urls')), 
-	url(r'^joara', include('joara.urls')), 
-    url(r'^keyword/', include('keyword_analysis.urls')), 
+	url(r'^integration/', include('integration.urls')), 
+	url(r'^joara/', include('joara.urls'), name='joara'), 
+    url(r'^keyword/', include('keyword_analysis.urls'), name='keyword'), 
     url(r'^admin/', admin.site.urls),
 ]
