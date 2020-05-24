@@ -20,19 +20,18 @@ driver.get('http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcateg
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 
-book_list = soup.select('#content > table > tbody > tr > td.book_data_intro_form.subject_long')
+book_list = soup.find_all('td', class_='book_data_intro_form subject_long')
+
+date = str(now.tm_year)+str(now.tm_mon)+str(now.tm_mday)
 
 for book in book_list:
-	#나중에 데이터 처리 시 활용
-	#genre = hangul.sub('', str(re.search(r'\[(.*?)\]' , "장르").group())) []없애기 
-	#title = hangul.sub(' ', str(re.search(r'\](.*?)\<' , "제목"))).strip() 제목 예쁘게 추출
-	try: 
-		genre = book.strong.text
-		title = book.a.text.replace(genre, '').strip()
-		intro = book.span.text
-	except:
-		genre = '실패'
-		title = ''
-		intro = book
-	TodayBest(year=now.tm_year, month=now.tm_mon, day=now.tm_mday, genre=genre, title=title, intro=intro).save()
+    try:
+        genre = book.strong.text
+        title = book.a.text.replace(genre, '').strip()
+        intro = book.span.text
+    except:
+        genre = 'failed'
+        title = ''
+        intro = book
+    TodayBest(date=date, genre=genre, title=title, intro=intro).save()
 driver.close()

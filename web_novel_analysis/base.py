@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from joara.models import TodayBest
+from joara.models import TodayBest as joara
+from bookpal.models import TodayBest as bookpal
 import re
 from konlpy.tag import Twitter
 from collections import Counter
@@ -13,7 +14,7 @@ from wordcloud import WordCloud
 
 def search(request):
 	#애도 전체 데이터로 구현하기
-	qs = TodayBest.objects.all()
+	qs = joara.objects.all() + bookpal.objects.all()
 	q = request.POST.get('q', '')
 	if q:
 		qs = qs.filter(title__icontains=q)
@@ -21,21 +22,22 @@ def search(request):
 
 #쿼리셋 주면 데이터 전처리해서 단어 개수 세어줌 
 def get_tags(qs, ntags=50): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
-	kor_eng = re.compile('[^ a-zA-Zㄱ-ㅣ가-힣]+') #한글, 영어만 추출 
+	hangul = re.compile('[^ a-zA-Z0-9ㄱ-ㅣ가-힣]+') 
 	txt = ''
 	for nov in qs:
 		txt = txt + ' ' + nov.title + ' ' + nov.intro
-	cleaned_text = kor_eng.sub(' ', txt)
+	cleaned_text = hangul.sub(' ', txt)
 	spliter = Twitter()
 	nouns = spliter.nouns(cleaned_text)
 	nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
 	count = Counter(nouns)
-	return_list = {}
+	return_dict = {}
+	#eturn_dict = {n, c in cont.most_common(ntags) if n not in ['표지', '소설', '그녀', '무료', '연재']}
 	for n, c in count.most_common(ntags):
-		if n == '표지' or n == '소설':
-			continue
-		return_list[n] = c
-	return return_list
+		#if n == '표지' or n == '소설':
+		if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']:
+			return_dict[n] = c
+	return return_dict
 
 def pie_graph(qs):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()

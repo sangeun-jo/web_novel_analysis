@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'integration', 
     'joara', 
+    'munpia',
+    'bookpal',
+    'tocsoda', 
 ]
 
 MIDDLEWARE = [
