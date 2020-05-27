@@ -5,7 +5,7 @@ from .forms import optionForm
 from web_novel_analysis.base import pie_graph
 from web_novel_analysis.base import wordcloud, get_tags
 from web_novel_analysis.base import bar_graph
-from web_novel_analysis.base import todays_date
+from web_novel_analysis.base import get_str_date
 from web_novel_analysis.base import search
 
 def main(request):

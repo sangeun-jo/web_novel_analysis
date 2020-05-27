@@ -17,7 +17,7 @@ from tocsoda.models import WebBest, FreeBest
 import re
 
 now = time.localtime()
-date = str(now.tm_year)+str(now.tm_mon)+str(now.tm_mday)
+date = str(now.tm_year)+str(now.tm_mon).zfill(2)+str(now.tm_mday).zfill(2)
 hangul = re.compile('[^ ㄱ-ㅣ가-힣]+') 
 
 chrome_options = webdriver.ChromeOptions()

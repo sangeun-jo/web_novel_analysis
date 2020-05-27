@@ -91,13 +91,12 @@ def wordcloud(qs):
 	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
 	return image_64
 
-def todays_date():
-	now = time.localtime()
-	year = str(now.tm_year)
-	month = str(now.tm_mon)
-	day = str(now.tm_mday)
-	date = year+month+day
-	return date 
+def get_str_date(date = time.localtime()):
+	year = str(date.tm_year)
+	month = str(date.tm_mon).zfill(2)
+	day = str(date.tm_mday).zfill(2)
+	str_date = year+month+day
+	return str_date 
 
 def bar_graph(qs):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
@@ -114,7 +113,6 @@ def bar_graph(qs):
 	#plt.ylabel('빈도수')
 	plt.xticks(range(len(keys)),keys, rotation=40)
 	plt.bar(range(len(values)), values)
-	#plt.axis("off")
 	image = io.BytesIO()
 	plt.savefig(image, format='png', bbox_inches='tight', pad_inches=0.1)
 	image.seek(0)  
