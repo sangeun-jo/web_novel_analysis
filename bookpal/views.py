@@ -1,29 +1,29 @@
 from django.shortcuts import render
 from .models import TodayBest
 from .forms import optionForm
-from web_novel_analysis.base import pie_graph
+from web_novel_analysis.base import pie_graph, bar_graph
 from web_novel_analysis.base import wordcloud, get_tags
-from web_novel_analysis.base import bar_graph
+from web_novel_analysis.base import filtering
 from web_novel_analysis.base import get_str_date
 from web_novel_analysis.base import search
+import datetime
+from django.views.decorators.csrf import csrf_exempt
+
 
 def main(request):
 	form = optionForm
-	#나중에 조아라 말고 플랫폼 전체 1개월 데이터로 워드 클라우드 만들기 
-	qs = TodayBest.objects.all()
-	defalt_wc = wordcloud(qs)
-	defalt_pie = pie_graph(qs)
-	defalt_bar = bar_graph(qs)
-	return render(request, 'bookpal/analysis.html', {'form':form, 'wordcloud': defalt_wc, 'pie_graph':defalt_pie, 'bar_graph':defalt_bar})
+	return render(request, 'bookpal/analysis.html', {'form':form })
 
+@csrf_exempt
 def result(request):
-	#조아라 데이터 구하기
 	qs = TodayBest.objects.all()
-	form = optionForm(request.GET)
-	if form.data['term'] == '1일':
-		date = todays_date()
-		qs = qs.filter(date__icontains=date)
-		_wc = wordcloud(qs)
-		_pie = pie_graph(qs)
-		_bar = bar_graph(qs)
-	return render(request, 'joara/analysis.html', {'wordcloud':_wc, 'pie_graph':_pie,  'bar_graph':_bar, 'genre':form.data['genre'], 'term':form.data['term']})
+	filtered = filtering(request, qs)
+	# 객체 반환
+	return render(request, 'bookpal/analysis.html', {
+		'wordcloud':wordcloud(filtered), 
+		'pie_graph':pie_graph(filtered),  
+		'bar_graph':bar_graph(filtered), 
+		#'genre':form.data['genre'], 
+		#'term':form.data['term'],
+	})
+	

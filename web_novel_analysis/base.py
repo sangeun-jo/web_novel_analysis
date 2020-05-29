@@ -1,16 +1,18 @@
 from django.shortcuts import render
 from joara.models import TodayBest as joara
 from bookpal.models import TodayBest as bookpal
-import re
+import re, io
 from konlpy.tag import Twitter
 from collections import Counter
 import urllib, base64
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
-import io
 import requests
-import time
+import time, datetime
 from wordcloud import WordCloud
+
+
+#======== 검색 모듈 ========== 
 
 def search(request):
 	#애도 전체 데이터로 구현하기
@@ -19,6 +21,9 @@ def search(request):
 	if q:
 		qs = qs.filter(title__icontains=q)
 	return render(request, 'integration/integration.html', {'search_result':qs})
+
+
+#==========키워드 분석 모듈 ===========
 
 #쿼리셋 주면 데이터 전처리해서 단어 개수 세어줌 
 def get_tags(qs, ntags=50): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
@@ -39,37 +44,6 @@ def get_tags(qs, ntags=50): #상위 100개만 추출(나중에 사용자한테 �
 			return_dict[n] = c
 	return return_dict
 
-def pie_graph(qs):
-	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
-	rc('font', family=font_name)
-	genre = []
-	for nov in qs:
-		nov.genre
-		genre.append(nov.genre)
-		rat = Counter(genre)
-	group_name = []
-	group_size = []
-	for genre in rat:
-		group_size.append(rat[genre])
-		genre = genre.replace('[', '')
-		genre = genre.replace(']', '')
-		group_name.append(genre)
-	plt.figure(figsize=(3.5, 3))
-	plt.pie(group_size, 
-		labels=group_name, 
-		autopct='%1.2f%%', # second decimal place
-		shadow=True, 
-		textprops={'fontsize': 8}) # text font size
-	plt.axis('equal') #  equal length of X and Y axis
-	#plt.title('인기 장르', fontsize=20)
-	plt.axis("off")
-	image = io.BytesIO()
-	plt.savefig(image, format='png')
-	image.seek(0)  # rewind the data
-	string = base64.b64encode(image.read())
-	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
-	return image_64
-
 def wordcloud(qs):
 	wc = WordCloud(font_path='C:/Windows/Fonts/malgun.ttf', 
             background_color='white', 
@@ -80,8 +54,11 @@ def wordcloud(qs):
     	)
 
 	keyword = get_tags(qs)
-	wc_img = wc.generate_from_frequencies(keyword)
-	plt.figure(figsize=(20, 6))
+	try:
+		wc_img = wc.generate_from_frequencies(keyword)
+	except:
+		return 'null'
+	plt.figure(figsize=(12, 5))
 	plt.imshow(wc_img, interpolation='bilinear')
 	plt.axis("off")
 	image = io.BytesIO()
@@ -91,17 +68,10 @@ def wordcloud(qs):
 	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
 	return image_64
 
-def get_str_date(date = time.localtime()):
-	year = str(date.tm_year)
-	month = str(date.tm_mon).zfill(2)
-	day = str(date.tm_mday).zfill(2)
-	str_date = year+month+day
-	return str_date 
-
 def bar_graph(qs):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
 	rc('font', family=font_name, size=8)
-	plt.figure(figsize=(6.1, 3.6))
+	plt.figure(figsize=(7, 3.9))
 	keyword = get_tags(qs, 20)
 	values = []
 	keys = [] 
@@ -119,3 +89,89 @@ def bar_graph(qs):
 	string = base64.b64encode(image.read())
 	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
 	return image_64
+
+
+
+#=======장르 분석 모듈 ==========
+
+def pie_graph(qs):
+	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
+	rc('font', family=font_name)
+	genre = []
+	for nov in qs:
+		nov.genre
+		genre.append(nov.genre)
+		rat = Counter(genre)
+	group_name = []
+	group_size = []
+	for genre in rat:
+		group_size.append(rat[genre])
+		genre = genre.replace('[', '')
+		genre = genre.replace(']', '')
+		group_name.append(genre)
+	plt.figure(figsize=(4, 3.6))
+	plt.pie(group_size, 
+		labels=group_name, 
+		autopct='%1.2f%%', # second decimal place
+		shadow=True, 
+		textprops={'fontsize': 8}) # text font size
+	plt.axis('equal') #  equal length of X and Y axis
+	#plt.title('인기 장르', fontsize=20)
+	plt.axis("off")
+	image = io.BytesIO()
+	plt.savefig(image, format='png')
+	image.seek(0)  # rewind the data
+	string = base64.b64encode(image.read())
+	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
+	return image_64
+
+
+#======= 필터링 모듈 =========
+
+def filtering(request, qs):
+	# 빈 쿼리셋 만들기
+	genredata = qs.none()
+	termdata = qs.none()
+	#form = optionForm(request.POST)
+
+	# 장르 필터링
+	genres = request.POST.getlist('genre') # 체크박스에 선택된 장르 가져오기
+	for gen in genres:
+		gen = '['+gen+']'
+		genredata = genredata.union(qs.filter(genre__iexact=gen))
+
+	# 1일, 1주일, 한달 간격 데이터 반환 시 사용.
+	for day in range(0, int(request.POST['term'])): 
+		d = datetime.timedelta(days = day)
+		_d = datetime.datetime.now() - d
+		year = str(_d.year)
+		mon = str(_d.month).zfill(2)
+		day = str(_d.day).zfill(2)
+		date = year+mon+day
+		termdata = termdata.union(qs.filter(date__iexact=date))
+
+	'''
+	# 시작날짜, 끝날짜 주면 그 사이에 있는 데이터 반환함. 캘린더로 입력 받을 시 사용
+	d = datetime.timedelta(days = int(request.POST['term'])) # n 일전 날짜 구하기 
+	_d = datetime.datetime.now() - d 
+	year = str(_d.year)
+	mon = str(_d.month).zfill(2)
+	day = str(_d.day).zfill(2)
+	start_date = year+mon+day
+	termdata = qs.filter(date__range=[start_date, get_str_date()])
+	'''	
+	relist = genredata.intersection(termdata)
+	for i in relist:
+		print(i)
+
+	return genredata.intersection(termdata)
+
+
+# ========= 기타 유용한 모듈들 =========
+
+def get_str_date(date = time.localtime()):
+	year = str(date.tm_year)
+	month = str(date.tm_mon).zfill(2)
+	day = str(date.tm_mday).zfill(2)
+	str_date = year+month+day
+	return str_date 

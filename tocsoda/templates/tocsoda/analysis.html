@@ -19,16 +19,89 @@
   <!-- Custom styles for this template-->
   <link href='{% static "css/sb-admin-2.min.css" %}' rel="stylesheet">
 
+  <style>
+/* The Modal (background) */
+.searchModal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 10; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+
+/* overflow: auto; */ 
+
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.search-modal-content {
+background-color: #fefefe;
+/* margin: 15% auto; */ 
+margin-top: 10%;
+margin-left: 20%;
+margin-right: 20%;
+padding: 20px;
+border: 1px solid #888;
+width: 70%; /* Could be more or less, depending on screen size */
+}
+</style>
+
+
 </head>
 
 <body id="page-top">
+  <!-- 옵션 선택 모달 창 -->
+  <div id="modal" class="searchModal">
+    <div class="search-modal-content">
+      <div class="page-header">
+        <div style="width:5%; float: right;">
+          <button class="close" onclick="closeModal()">&times;</button>
+        </div>
+        <div style="width:30%;">
+          <h4>분석 옵션 설정</h4>
+        </div>
+        <hr>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-12">
+              <form action='analysis' method="post"> 
+                <div>
+                  <p><b>장르</b></p>
+                  <div>
+                    <input type="checkbox" id="checkAll"/> 전체 
+                    {% for genre in form.genre %}
+                      {{ genre }}
+                    {% endfor %}
+                  </div>
+                  <br>
+                  <p><b>기간</b></p>
+                  <div>
+                    {{ form.term }}
+                    {{ term }}
+                  </div>
+                <!-- 심화: 기간 달력처럼 해서 직접 선택할 수 있게하기 -->
+                </div>
+                <div style="cursor:pointer;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="closeModal()">
+                  <input class="pop_bt modalCloseBtn" style="font-size: 13pt;" type="submit" onclick="  show_genre();" value="분석하기">
+                </div>
+              </form> 
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
 
   <!-- Page Wrapper -->
   <div id="wrapper">
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -73,31 +146,19 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href=''>
+        <a class="nav-link" href='{% url "joara" %}'>
           <i class="fas fa-fw fa-chart-area"></i>
           <span>조아라</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href='{% static "charts.html" %}'>
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>문피아</span></a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href='{% static "charts.html" %}'>
+        <a class="nav-link" href='{% url "bookpal" %}'>
           <i class="fas fa-fw fa-chart-area"></i>
           <span>북팔</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href='{% static "charts.html" %}'>
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>리디북스(추가예정)</span></a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href='{% static "charts.html" %}'>
+        <a class="nav-link" href='{% url "bookpal" %}'>
           <i class="fas fa-fw fa-chart-area"></i>
           <span>톡소다</span></a>
       </li>
@@ -141,7 +202,6 @@
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -174,43 +234,10 @@
         <!-- End of Topbar -->
 
         <div class="container-fluid">
-
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <div style="width:40%;">
-            <h1 class="h3 mb-2 text-gray-800">플랫폼 트렌드 분석</h1>
-            </div>
-            <div style="width:60%;">
-            <form action='{% url "analysis" %}' method="get">
-              <div style="float: left; margin-right: 10px;width: 20%;">
-                <div style="float: left;margin-right: 10px;"><p><b>장르</b></p></div>
-                  <div style="float: left;"> 
-                      {{ form.genre }}
-                      {{ genre }}
-                  </div>
-                </div>
-              <div style="float: left; margin-right: 10px;width: 25%;">
-                <div style="float: left; margin-right: 10px;"><p><b>기간</b></p></div>
-                  <div style="float: left;">
-                    {{ form.term }}
-                    {{ term }}
-                  </div>
-                </div>
-              <div style="float: right; margin-right: 20px; width: 10%;">
-                <input type="submit" value="분석하기" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-              </div>
-          </div> 
-
-          </div>
        <!-- Page Heading -->
-
-         
-
-<!--
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-2 text-gray-800"><b>투데이 베스트 분석</b></h1>
-              <p class="mb-4">매일 자정 베스트 상위 20개 작품 장르, 제목, 소개글 3줄을 분석한 결과입니다. <a target="_blank" href="http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcategory=all">조아라 투데이 베스트 메뉴 바로가기</a></p> 
+          <div>
+              <p class="mb-4">매일 자정 유료, 무료 베스트의 상위 20개 작품 장르, 제목, 소개글을 분석한 결과입니다. <a target="_blank" href="http://www.tocsoda.co.kr/totalBestView/00023">톡소다 투데이 베스트 메뉴 바로가기</a></p> 
           </div>
--->
           <!-- Content Row -->
           <div class="row">
             <div class="col-xl-12 col-lg-1">
@@ -231,13 +258,9 @@
               <!-- Area Chart -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">인기 장르 분석</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">장르 분석</h6>
                 </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <img src='{{ pie_graph }}'>
-                  </div>
-                </div>
+                  <img src='{{ pie_graph }}'>
               </div>
             </div>
 
@@ -247,11 +270,7 @@
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">키워드 빈도</h6>
                 </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <img src='{{ bar_graph }}'>
-                  </div>
-                </div>
+                  <img src='{{ bar_graph }}'>
               </div>
             </div>
           </div>
@@ -318,6 +337,49 @@
   <script src='{% static "js/demo/chart-area-demo.js" %}'></script>
   <script src='{% static "js/demo/chart-pie-demo.js" %}'></script>
   <script src='{% static "js/demo/chart-bar-demo.js" %}'></script>
+
+  <script>
+    
+    /*
+    jQuery(window.location.href == '{% url "joara" %}').ready(function () {
+      $("#modal").show();
+    });
+    */
+
+    jQuery(document).ready(function () {
+      if(window.location.href == 'http://localhost:8000/tocsoda/') {
+         $("#modal").show();
+
+      }
+    });
+
+    // if(window.location.href == '{% url "joara" %}') {  showModal(); }
+    /*
+    jQuery(document).ready(function () {
+      $("#modal").show();
+    });
+    */
+
+    function closeModal() {
+      $('.searchModal').hide();
+    };
+  </script>
+
+  <script type="text/javascript">
+    $(function(){
+      $("#checkAll").click(function(){
+        
+        if($("#checkAll").prop("checked")) { 
+          $("input[type=checkbox]").prop("checked",true);
+        } 
+        
+        else {
+          $("input[type=checkbox]").prop("checked",false); 
+        }
+      });
+    }); 
+  </script>
+
 
 </body>
 
