@@ -23,10 +23,12 @@ def main(request):
 def result(request):
 	qs = TodayBest.objects.all()
 	filtered = filtering(request, qs)
+	w_keyword = get_tags(filtered)
+	b_keyword = get_tags(filtered, 20)
 	return render(request, 'joara/analysis.html', {
-	'wordcloud':wordcloud(filtered), 
+	'wordcloud':wordcloud(w_keyword), 
 	'pie_graph':pie_graph(filtered),  
-	'bar_graph':bar_graph(filtered), 
+	'bar_graph':bar_graph(b_keyword), 
 	})
 
 	

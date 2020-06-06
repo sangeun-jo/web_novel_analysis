@@ -23,5 +23,6 @@ urlpatterns = [
 	url(r'^joara/', include('joara.urls'), name='joara'), 
     url(r'^bookpal/', include('bookpal.urls'), name='bookpal'), 
     url(r'^tocsoda/', include('tocsoda.urls'), name='tocsoda'), 
+    url(r'^comment/', include('comment.urls'), name='comment'),
     url(r'^admin/', admin.site.urls),
 ]

@@ -19,9 +19,12 @@ def result(request):
 	web = filtering(request, WebBest.objects.all())
 	free = filtering(request, FreeBest.objects.all())
 	filtered = web.union(free)
+
+	keyword = get_tags(filtered)
+
 	# 객체 반환
 	return render(request, 'tocsoda/analysis.html', {
-		'wordcloud':wordcloud(filtered), 
+		'wordcloud':wordcloud(keyword), 
 		'pie_graph':pie_graph(filtered),  
 		'bar_graph':bar_graph(filtered), 
 		#'genre':form.data['genre'], 

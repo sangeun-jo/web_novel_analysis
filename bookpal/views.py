@@ -18,9 +18,12 @@ def main(request):
 def result(request):
 	qs = TodayBest.objects.all()
 	filtered = filtering(request, qs)
+	
+	keyword = get_tags(filtered)
+
 	# 객체 반환
 	return render(request, 'bookpal/analysis.html', {
-		'wordcloud':wordcloud(filtered), 
+		'wordcloud':wordcloud(keyword), 
 		'pie_graph':pie_graph(filtered),  
 		'bar_graph':bar_graph(filtered), 
 		#'genre':form.data['genre'], 

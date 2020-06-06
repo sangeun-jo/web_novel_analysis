@@ -15,36 +15,39 @@ from wordcloud import WordCloud
 #======== 검색 모듈 ========== 
 
 def search(request):
-	#애도 전체 데이터로 구현하기
-	qs = joara.objects.all() + bookpal.objects.all()
-	q = request.POST.get('q', '')
-	if q:
-		qs = qs.filter(title__icontains=q)
-	return render(request, 'integration/integration.html', {'search_result':qs})
-
+	url = request.POST.get('comment_url', '')
+	return render(request, 'comment/analysis.html', {'comment_url':url})
 
 #==========키워드 분석 모듈 ===========
 
 #쿼리셋 주면 데이터 전처리해서 단어 개수 세어줌 
-def get_tags(qs, ntags=50): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
+def get_tags(data, ntags=50): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
 	hangul = re.compile('[^ a-zA-Z0-9ㄱ-ㅣ가-힣]+') 
+
 	txt = ''
-	for nov in qs:
-		txt = txt + ' ' + nov.title + ' ' + nov.intro
+
+	if type(data) == list:
+		for nov in data:
+			txt = txt + ' ' + nov
+	else: 
+		for nov in data:
+			txt = txt + ' ' + nov.title + ' ' + nov.intro
+
 	cleaned_text = hangul.sub(' ', txt)
 	spliter = Twitter()
 	nouns = spliter.nouns(cleaned_text)
 	nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
 	count = Counter(nouns)
 	return_dict = {}
-	#eturn_dict = {n, c in cont.most_common(ntags) if n not in ['표지', '소설', '그녀', '무료', '연재']}
+
+	#return_dict = {n, c in cont.most_common(ntags) if n not in ['표지', '소설', '그녀', '무료', '연재']}
 	for n, c in count.most_common(ntags):
 		#if n == '표지' or n == '소설':
 		if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']:
 			return_dict[n] = c
 	return return_dict
 
-def wordcloud(qs):
+def wordcloud(keyword):
 	wc = WordCloud(font_path='C:/Windows/Fonts/malgun.ttf', 
             background_color='white', 
             width=900, 
@@ -53,7 +56,6 @@ def wordcloud(qs):
             max_font_size=200, 
     	)
 
-	keyword = get_tags(qs)
 	try:
 		wc_img = wc.generate_from_frequencies(keyword)
 	except:
@@ -68,11 +70,11 @@ def wordcloud(qs):
 	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
 	return image_64
 
-def bar_graph(qs):
+def bar_graph(keyword):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
 	rc('font', family=font_name, size=8)
 	plt.figure(figsize=(7, 3.9))
-	keyword = get_tags(qs, 20)
+	#keyword = get_tags(qs, 20)
 	values = []
 	keys = [] 
 	for key in keyword.keys():
