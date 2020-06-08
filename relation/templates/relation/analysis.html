@@ -19,84 +19,9 @@
   <!-- Custom styles for this template-->
   <link href='{% static "css/sb-admin-2.min.css" %}' rel="stylesheet">
 
-  <style>
-/* The Modal (background) */
-.searchModal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 10; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-
-/* overflow: auto; */ 
-
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-/* Modal Content/Box */
-.search-modal-content {
-background-color: #fefefe;
-/* margin: 15% auto; */ 
-margin-top: 10%;
-margin-left: 20%;
-margin-right: 20%;
-padding: 20px;
-border: 1px solid #888;
-width: 70%; /* Could be more or less, depending on screen size */
-}
-</style>
-
-
 </head>
 
 <body id="page-top">
-  <!-- 옵션 선택 모달 창 -->
-  <div id="modal" class="searchModal">
-    <div class="search-modal-content">
-      <div class="page-header">
-        <div style="width:5%; float: right;">
-          <button class="close" onclick="closeModal()">&times;</button>
-        </div>
-        <div style="width:30%;">
-          <h4>분석 옵션 설정</h4>
-        </div>
-        <hr>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-12">
-              <form action='analysis' method="post"> 
-                <div>
-                  <p><b>장르</b></p>
-                  <div>
-                    <input type="checkbox" id="checkAll"/> 전체 
-                    {% for genre in form.genre %}
-                      {{ genre }}
-                    {% endfor %}
-                  </div>
-                  <br>
-                  <p><b>기간</b></p>
-                  <div>
-                    {{ form.term }}
-                    {{ term }}
-                  </div>
-                <!-- 심화: 기간 달력처럼 해서 직접 선택할 수 있게하기 -->
-                </div>
-                <div style="cursor:pointer;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="closeModal()">
-                  <input class="pop_bt modalCloseBtn" style="font-size: 13pt;" type="submit" onclick="  show_genre();" value="분석하기">
-                </div>
-              </form> 
-            </div>
-          </div>
-        </div>
-      </div>    
-    </div>
-  </div>
-
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -154,7 +79,7 @@ width: 70%; /* Could be more or less, depending on screen size */
           <i class="fas fa-fw fa-chart-area"></i>
           <span>북팔</span></a>
       </li>
-
+      
       <li class="nav-item">
         <a class="nav-link" href='{% url "bookpal" %}'>
           <i class="fas fa-fw fa-chart-area"></i>
@@ -222,9 +147,7 @@ width: 70%; /* Could be more or less, depending on screen size */
             </li>
   
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-            </li>
+          
 
           </ul>
 
@@ -232,46 +155,59 @@ width: 70%; /* Could be more or less, depending on screen size */
         <!-- End of Topbar -->
 
         <div class="container-fluid">
+
        <!-- Page Heading -->
-          <div>
-              <p class="mb-4">매일 자정 유료, 무료 베스트의 상위 20개 작품 장르, 제목, 소개글을 분석한 결과입니다. <a target="_blank" href="http://www.tocsoda.co.kr/totalBestView/00023">톡소다 투데이 베스트 메뉴 바로가기</a></p> 
-          </div>
+
           <!-- Content Row -->
+          <div class="row">
+<div class="col-xl-12 col-lg-1">
+  <form action='analysis' method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <div style="float:left;width: 33%;">
+      <input type='file' name='uploadedFile' />
+    </div>
+
+
+    <div style="float:left;width: 67%;">
+    
+      <div class="input-group">
+        <input class="form-control bg-light border-1" type='text' name='input_char' value="{{ input_char }}"  placeholder="주요 등장인물을 쉼표로 구분하여 입력하세요"/>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">
+            분석하기
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </form>
+</div>           
+          </div>
+
+        <br>
+
           <div class="row">
             <div class="col-xl-12 col-lg-1">
               <!-- Area Chart -->
               <div class="card shadow mb-4"> 
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">트렌드 분석</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">인물 관계도 분석</h6>
                 </div>
-                  <img src='{{ wordcloud }}'>
+                  <img src='{{ result }}'> 
               </div>
             </div>
           </div>
 
-          <div class="row">
+
             
+          <div>
+            + 반드시 저작권을 보유한 상태로 이용해 주세요. 사이트는 소설 파일을 저장하지 않습니다.
+              
+            <a style="float: right;" href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> 결과 다운로드</a>
 
-            <div class="col-xl-5 col-lg-7">
-              <!-- Area Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">장르 분석</h6>
-                </div>
-                  <img src='{{ pie_graph }}'>
-              </div>
-            </div>
-
-            <div class="col-xl-7 col-lg-7">
-              <!-- Area Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">키워드 빈도</h6>
-                </div>
-                  <img src='{{ bar_graph }}'>
-              </div>
-            </div>
           </div>
+          <br>
 
         </div>
         <!-- /.container-fluid -->
@@ -282,7 +218,7 @@ width: 70%; /* Could be more or less, depending on screen size */
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; 조상은 2019</span>
+            <span>Copyright &copy; 조상은 2020</span>
           </div>
         </div>
       </footer>
@@ -335,50 +271,6 @@ width: 70%; /* Could be more or less, depending on screen size */
   <script src='{% static "js/demo/chart-area-demo.js" %}'></script>
   <script src='{% static "js/demo/chart-pie-demo.js" %}'></script>
   <script src='{% static "js/demo/chart-bar-demo.js" %}'></script>
-
-  <script>
-    
-    /*
-    jQuery(window.location.href == '{% url "joara" %}').ready(function () {
-      $("#modal").show();
-    });
-    */
-
-    jQuery(document).ready(function () {
-      if(window.location.href == 'http://localhost:8000/tocsoda/') {
-         $("#modal").show();
-
-      }
-    });
-
-    // if(window.location.href == '{% url "joara" %}') {  showModal(); }
-    /*
-    jQuery(document).ready(function () {
-      $("#modal").show();
-    });
-    */
-
-    function closeModal() {
-      $('.searchModal').hide();
-    };
-  </script>
-
-  <script type="text/javascript">
-    $(function(){
-      $("#checkAll").click(function(){
-        
-        if($("#checkAll").prop("checked")) { 
-          $("input[type=checkbox]").prop("checked",true);
-        } 
-        
-        else {
-          $("input[type=checkbox]").prop("checked",false); 
-        }
-      });
-    }); 
-  </script>
-
-
 </body>
 
 </html>

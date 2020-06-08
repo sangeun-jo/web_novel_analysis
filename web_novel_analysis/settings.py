@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'bookpal',
     'tocsoda', 
     'comment',
+    'relation',
 ]
 
 MIDDLEWARE = [

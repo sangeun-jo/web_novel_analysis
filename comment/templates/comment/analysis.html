@@ -55,10 +55,8 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-             <a class="collapse-item" href='' >키워드 분석</a>
-            <a class="collapse-item" href="utilities-border.html">인기작 장르 분석 </a>
-            <a class="collapse-item" href="utilities-color.html">댓글 반응 분석</a>
-            <a class="collapse-item" href="utilities-border.html">인물 관계도 분석 </a>
+            <a class="collapse-item" href='/comment'>댓글 반응 분석</a>
+            <a class="collapse-item" href='/relation'>인물 관계도 분석 </a>
           </div>
         </div>
       </li>
@@ -149,10 +147,7 @@
             </li>
   
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-            </li>
-
+          
           </ul>
 
         </nav>
@@ -162,19 +157,27 @@
 
        <!-- Page Heading -->
 
-          <div>
-              <p class="mb-4">매일 자정 베스트 상위 20개 작품의 장르, 제목, 소개글을 분석한 결과입니다. <a target="_blank" href="http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcategory=all">조아라 투데이 베스트 메뉴 바로가기</a></p> 
-          </div>
-
           <!-- Content Row -->
-          <div class="row">
+          <div>
 
             <form action="analysis" method="post">
-              <p>댓글 url <input type='text' name='comment_url' value="{{ comment_url }}" /></p>
-                <input class="btn btn-primary" type="submit" value="분석하기" />
+
+
+              <div class="input-group">
+                
+                  <input class="form-control bg-light border-1" type='text' name='comment_url' value="{{ comment_url }}" placeholder="댓글 전체 페이지, 혹은 댓글 첫페이지 url 주소를 입력하세요"/>
+                  <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit">분석하기</button>
+                </div>
+              </div>
+
+
             </form>
             
           </div>
+
+          <br>
+
 
           <div class="row">
             <div class="col-xl-12 col-lg-1">
@@ -210,6 +213,13 @@
             </div>
 
           </div>
+
+          <div>
+            + 현재 조아라, 북팔, 톡소다 사이트만 지원하며, 로그인이 필요한 성인물이나 유료 상품의 경우 분석이 불가능합니다.
+            <a style="float: right;" href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> 결과 다운로드</a>
+
+          </div>
+          <br>
 
         </div>
         <!-- /.container-fluid -->
