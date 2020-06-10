@@ -19,14 +19,16 @@ def result(request):
 	web = filtering(request, WebBest.objects.all())
 	free = filtering(request, FreeBest.objects.all())
 	filtered = web.union(free)
-
-	keyword = get_tags(filtered)
+	if not filtered:	
+		return render(request, 'tocsoda/analysis.html', {'none':'검색결과가 없습니다.'})
+	w_keyword = get_tags(filtered)
+	b_keyword = get_tags(filtered, 20)
 
 	# 객체 반환
 	return render(request, 'tocsoda/analysis.html', {
-		'wordcloud':wordcloud(keyword), 
+		'wordcloud':wordcloud(w_keyword), 
 		'pie_graph':pie_graph(filtered),  
-		'bar_graph':bar_graph(filtered), 
+		'bar_graph':bar_graph(b_keyword), 
 		#'genre':form.data['genre'], 
 		#'term':form.data['term'],
 	})

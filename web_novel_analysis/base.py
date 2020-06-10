@@ -100,6 +100,7 @@ def pie_graph(qs):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
 	rc('font', family=font_name)
 	genre = []
+	rat = []
 	for nov in qs:
 		nov.genre
 		genre.append(nov.genre)
@@ -137,20 +138,32 @@ def filtering(request, qs):
 	#form = optionForm(request.POST)
 
 	# 장르 필터링
+
+
 	genres = request.POST.getlist('genre') # 체크박스에 선택된 장르 가져오기
+
 	for gen in genres:
 		gen = '['+gen+']'
-		genredata = genredata.union(qs.filter(genre__iexact=gen))
-
+		try:
+			genredata = genredata.union(qs.filter(genre__iexact=gen))
+		except:
+			continue
+	#print('장르', genredata)
 	# 1일, 1주일, 한달 간격 데이터 반환 시 사용.
-	for day in range(0, int(request.POST['term'])): 
+	
+	term = int(request.POST['term'])
+
+	for day in range(0, term): 
 		d = datetime.timedelta(days = day)
 		_d = datetime.datetime.now() - d
 		year = str(_d.year)
 		mon = str(_d.month).zfill(2)
 		day = str(_d.day).zfill(2)
 		date = year+mon+day
-		termdata = termdata.union(qs.filter(date__iexact=date))
+		try:
+			termdata = termdata.union(qs.filter(date__iexact=date))
+		except:
+			continue
 
 	'''
 	# 시작날짜, 끝날짜 주면 그 사이에 있는 데이터 반환함. 캘린더로 입력 받을 시 사용
@@ -162,11 +175,9 @@ def filtering(request, qs):
 	start_date = year+mon+day
 	termdata = qs.filter(date__range=[start_date, get_str_date()])
 	'''	
-	relist = genredata.intersection(termdata)
-	for i in relist:
-		print(i)
 
-	return genredata.intersection(termdata)
+	# 여기서 문제임 
+	return termdata.intersection(genredata)
 
 
 # ========= 기타 유용한 모듈들 =========

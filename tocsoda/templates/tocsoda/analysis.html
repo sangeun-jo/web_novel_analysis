@@ -117,7 +117,7 @@ width: 70%; /* Could be more or less, depending on screen size */
       <li class="nav-item">
         <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>플랫폼 통합 분석 결과</span></a>
+          <span>플랫폼 통합 트렌드</span></a>
       </li>
 
       <!-- Divider -->
@@ -232,6 +232,11 @@ width: 70%; /* Could be more or less, depending on screen size */
         <!-- End of Topbar -->
 
         <div class="container-fluid">
+          {% if none %}
+          <div class="alert alert-danger" role="alert">
+            {{ none }}
+          </div>
+          {% endif %}
        <!-- Page Heading -->
           <div>
               <p class="mb-4">매일 자정 유료, 무료 베스트의 상위 20개 작품 장르, 제목, 소개글을 분석한 결과입니다. <a target="_blank" href="http://www.tocsoda.co.kr/totalBestView/00023">톡소다 투데이 베스트 메뉴 바로가기</a></p> 

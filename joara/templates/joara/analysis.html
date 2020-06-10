@@ -120,7 +120,7 @@ width: 70%; /* Could be more or less, depending on screen size */
       <li class="nav-item">
         <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>플랫폼 통합 분석 결과</span></a>
+          <span>플랫폼 통합 트렌드</span></a>
       </li>
 
       <!-- Divider -->
@@ -237,11 +237,15 @@ width: 70%; /* Could be more or less, depending on screen size */
         <div class="container-fluid">
 
        <!-- Page Heading -->
-
+          {% if none %}
+          <div class="alert alert-danger" role="alert">
+            {{ none }}
+          </div>
+          {% endif %}
           <div>
               <p class="mb-4">매일 자정 베스트 상위 20개 작품의 장르, 제목, 소개글을 분석한 결과입니다. <a target="_blank" href="http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcategory=all">조아라 투데이 베스트 메뉴 바로가기</a></p> 
           </div>
-
+          
           <!-- Content Row -->
           <div class="row">
             <div class="col-xl-12 col-lg-1">
@@ -250,7 +254,9 @@ width: 70%; /* Could be more or less, depending on screen size */
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">트렌드 분석</h6>
                 </div>
+                {% if wordcloud %}
                   <img src='{{ wordcloud }}'>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -263,6 +269,7 @@ width: 70%; /* Could be more or less, depending on screen size */
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">장르 분석</h6>
                 </div>
+
                   <img src='{{ pie_graph }}'>
               </div>
             </div>

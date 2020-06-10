@@ -8,6 +8,7 @@ from web_novel_analysis.base import get_str_date
 from web_novel_analysis.base import search
 import datetime
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 
 def main(request):
@@ -23,6 +24,8 @@ def main(request):
 def result(request):
 	qs = TodayBest.objects.all()
 	filtered = filtering(request, qs)
+	if not filtered:	
+		return render(request, 'joara/analysis.html', {'none':'검색결과가 없습니다.'})
 	w_keyword = get_tags(filtered)
 	b_keyword = get_tags(filtered, 20)
 	return render(request, 'joara/analysis.html', {
