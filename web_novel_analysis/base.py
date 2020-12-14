@@ -47,6 +47,8 @@ def get_tags(data, ntags=50): #상위 100개만 추출(나중에 사용자한테
 			return_dict[n] = c
 	return return_dict
 
+
+
 def wordcloud(keyword):
 	wc = WordCloud(font_path='C:/Windows/Fonts/malgun.ttf', 
             background_color='white', 
@@ -69,6 +71,8 @@ def wordcloud(keyword):
 	string = base64.b64encode(image.read())
 	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
 	return image_64
+
+
 
 def bar_graph(keyword):
 	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
@@ -138,17 +142,14 @@ def filtering(request, qs):
 	#form = optionForm(request.POST)
 
 	# 장르 필터링
-
-
 	genres = request.POST.getlist('genre') # 체크박스에 선택된 장르 가져오기
-
+	print("선택된 장르: ", genres)
 	for gen in genres:
 		gen = '['+gen+']'
-		try:
-			genredata = genredata.union(qs.filter(genre__iexact=gen))
-		except:
-			continue
-	#print('장르', genredata)
+		filtered_genre = qs.filter(genre__iexact=gen)
+		if filtered_genre: 
+			genredata = genredata.union(filtered_genre)
+	
 	# 1일, 1주일, 한달 간격 데이터 반환 시 사용.
 	
 	term = int(request.POST['term'])
@@ -160,10 +161,9 @@ def filtering(request, qs):
 		mon = str(_d.month).zfill(2)
 		day = str(_d.day).zfill(2)
 		date = year+mon+day
-		try:
-			termdata = termdata.union(qs.filter(date__iexact=date))
-		except:
-			continue
+		filtered_date = qs.filter(date__iexact=date)
+		if filtered_date:
+			termdata = termdata.union(filtered_date)
 
 	'''
 	# 시작날짜, 끝날짜 주면 그 사이에 있는 데이터 반환함. 캘린더로 입력 받을 시 사용
@@ -175,8 +175,6 @@ def filtering(request, qs):
 	start_date = year+mon+day
 	termdata = qs.filter(date__range=[start_date, get_str_date()])
 	'''	
-
-	# 여기서 문제임 
 	return termdata.intersection(genredata)
 
 
