@@ -10,6 +10,7 @@ from matplotlib import font_manager, rc
 import requests
 import time, datetime
 from wordcloud import WordCloud
+from django.contrib.staticfiles.storage import staticfiles_storage
 
 
 #======== 검색 모듈 ========== 
@@ -47,10 +48,8 @@ def get_tags(data, ntags=50): #상위 100개만 추출(나중에 사용자한테
 			return_dict[n] = c
 	return return_dict
 
-
-
 def wordcloud(keyword):
-	wc = WordCloud(font_path='C:/Windows/Fonts/malgun.ttf', 
+	wc = WordCloud(font_path='/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf',  
             background_color='white', 
             width=900, 
             height=360, 
@@ -72,10 +71,8 @@ def wordcloud(keyword):
 	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
 	return image_64
 
-
-
 def bar_graph(keyword):
-	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
+	font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
 	rc('font', family=font_name, size=8)
 	plt.figure(figsize=(7, 3.9))
 	#keyword = get_tags(qs, 20)
@@ -101,7 +98,7 @@ def bar_graph(keyword):
 #=======장르 분석 모듈 ==========
 
 def pie_graph(qs):
-	font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
+	font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
 	rc('font', family=font_name)
 	genre = []
 	rat = []
@@ -143,7 +140,6 @@ def filtering(request, qs):
 
 	# 장르 필터링
 	genres = request.POST.getlist('genre') # 체크박스에 선택된 장르 가져오기
-	print("선택된 장르: ", genres)
 	for gen in genres:
 		gen = '['+gen+']'
 		filtered_genre = qs.filter(genre__iexact=gen)
