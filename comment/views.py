@@ -24,7 +24,7 @@ def main(request):
 def joara_comment(url):
 	chrome_options = webdriver.ChromeOptions()
 	chrome_options.add_argument('headless')
-	driver = webdriver.Chrome('D:/chromedriver.exe', options=chrome_options)
+	driver = webdriver.Chrome('/home/ubuntu/Downloads/chromedriver', options=chrome_options)
 	driver.get(url)
 	while True:
 		driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -48,7 +48,7 @@ def joara_comment(url):
 def bookpal_comment(url):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('headless')
-    driver = webdriver.Chrome('D:/chromedriver.exe', options=chrome_options)
+    driver = webdriver.Chrome('/home/ubuntu/Downloads/chromedriver', options=chrome_options)
 
     commentList = []
     cnt = 1
@@ -72,7 +72,7 @@ def bookpal_comment(url):
 def tocsoda_comment(url):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('headless')
-    driver = webdriver.Chrome('D:/chromedriver.exe', options=chrome_options)
+    driver = webdriver.Chrome('/home/ubuntu/Downloads/chromedriver', options=chrome_options)
     cnt = 1
     commentList = []
     urlList = url.split('?')

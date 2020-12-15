@@ -14,7 +14,7 @@ hangul = re.compile('[^ ㄱ-ㅣ가-힣]+')
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless')
-driver = webdriver.Chrome('D:/chromedriver.exe', options=chrome_options)
+driver = webdriver.Chrome('/home/ubuntu/Downloads/chromedriver', options=chrome_options)
 
 driver.get('http://www.joara.com/best/today_best_list.html?page_no=1&sl_subcategory=all')
 html = driver.page_source

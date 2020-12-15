@@ -21,7 +21,7 @@ hangul = re.compile('[^ ㄱ-ㅣ가-힣]+')
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless')
-driver = webdriver.Chrome('D:/chromedriver.exe', options=chrome_options)
+driver = webdriver.Chrome('/home/ubuntu/Downloads/chromedriver', options=chrome_options)
 
 driver.get('https://novel.bookpal.co.kr/novel@best?depth=list_search')
 time.sleep(10)

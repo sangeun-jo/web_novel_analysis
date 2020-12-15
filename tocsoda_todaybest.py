@@ -22,7 +22,7 @@ hangul = re.compile('[^ ㄱ-ㅣ가-힣]+')
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('headless')
-driver = webdriver.Chrome('D:/chromedriver.exe', options=chrome_options)
+driver = webdriver.Chrome('/home/ubuntu/Downloads/chromedriver', options=chrome_options)
 def crawler(kind):
     driver.get('http://www.tocsoda.co.kr/totalBestView/' + kind) #00023
     if kind == '00023': #웹소설 

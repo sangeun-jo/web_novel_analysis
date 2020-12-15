@@ -122,7 +122,7 @@ def relationship(book_text, input_char):
 
 	pos = nx.spring_layout(G, k=0.42, iterations=17)
 
-	nx.draw(G, pos, with_labels=True, font_family="malgun gothic", font_size = 8, font_weight = 'bold', node_size = sizes, width = widths)
+	nx.draw(G, pos, with_labels=True, font_family="NanumBarunGothic", font_size = 8, font_weight = 'bold', node_size = sizes, width = widths)
 
 	plt.axis("off")
 	image = io.BytesIO()
