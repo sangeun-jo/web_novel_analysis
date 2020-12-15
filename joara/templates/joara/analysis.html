@@ -88,7 +88,7 @@ width: 70%; /* Could be more or less, depending on screen size */
                   </div>
                 <!-- 심화: 기간 달력처럼 해서 직접 선택할 수 있게하기 -->
                 </div>
-                <div style="cursor:pointer;text-align: center;padding-bottom: 10px;padding-top: 10px;">
+                <div style="cursor:pointer;text-align: center;padding-bottom: 10px;padding-top: 10px;" onclick="closeModal();">
                   <input class="pop_bt modalCloseBtn" style="font-size: 13pt;" type="submit" value="분석하기">
                 </div>
               </form> 
@@ -350,25 +350,12 @@ width: 70%; /* Could be more or less, depending on screen size */
 
   <script>
     
-    /*
-    jQuery(window.location.href == '{% url "joara" %}').ready(function () {
-      $("#modal").show();
-    });
-    */
-
-    jQuery(document).ready(function () {
-      if(window.location.href == 'http://localhost:8000/joara/') {
+    jQuery(document).ready(function() {
+      if(window.location.href == 'http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8080/joara/') {
          $("#modal").show();
-
       }
     });
-
-    // if(window.location.href == '{% url "joara" %}') {  showModal(); }
-    /*
-    jQuery(document).ready(function () {
-      $("#modal").show();
-    });
-    */
+    
 
     function closeModal() {
       $('.searchModal').hide();

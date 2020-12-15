@@ -10,7 +10,6 @@ from matplotlib import font_manager, rc
 import requests
 import time, datetime
 from wordcloud import WordCloud
-from django.contrib.staticfiles.storage import staticfiles_storage
 
 
 #======== 검색 모듈 ========== 
@@ -72,7 +71,10 @@ def wordcloud(keyword):
 	return image_64
 
 def bar_graph(keyword):
-	font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
+	try:
+		font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
+	except:
+		font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
 	rc('font', family=font_name, size=8)
 	plt.figure(figsize=(7, 3.9))
 	#keyword = get_tags(qs, 20)
@@ -98,7 +100,10 @@ def bar_graph(keyword):
 #=======장르 분석 모듈 ==========
 
 def pie_graph(qs):
-	font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
+	try:
+		font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
+	except:
+		font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
 	rc('font', family=font_name)
 	genre = []
 	rat = []

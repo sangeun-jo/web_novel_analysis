@@ -12,8 +12,10 @@ def home(request):
 	money = [100, 200, 500, 1800, 2700, 4000]
 	year = ['2013', '2014', '2015', '2016', '2017', '2018']
 	index = np.arange(len(year))
-
-	font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
+	try:
+		font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
+	except:
+		font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
 	rc('font', family=font_name, size=8)
 	plt.figure(figsize=(7, 3.9))
 	plt.bar(index, money)

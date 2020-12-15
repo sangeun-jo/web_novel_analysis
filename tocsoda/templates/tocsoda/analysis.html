@@ -343,29 +343,18 @@ width: 70%; /* Could be more or less, depending on screen size */
 
   <script>
     
-    /*
-    jQuery(window.location.href == '{% url "joara" %}').ready(function () {
-      $("#modal").show();
-    });
-    */
-
-    jQuery(document).ready(function () {
-      if(window.location.href == 'http://localhost:8000/tocsoda/') {
+    jQuery(document).ready(function() {
+      if(window.location.href == 'http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8080/tocsoda/') {
          $("#modal").show();
-
       }
     });
-
-    // if(window.location.href == '{% url "joara" %}') {  showModal(); }
-    /*
-    jQuery(document).ready(function () {
-      $("#modal").show();
-    });
-    */
+    
 
     function closeModal() {
       $('.searchModal').hide();
     };
+
+
   </script>
 
   <script type="text/javascript">
