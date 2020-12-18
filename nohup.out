@@ -175,3 +175,81 @@
 [I 11:31:43.536 NotebookApp] Shutting down 2 kernels
 [I 11:31:43.844 NotebookApp] Kernel shutdown: adfeaf94-c0c2-4d32-8559-00e84bbe27b9
 [I 11:31:43.844 NotebookApp] Kernel shutdown: c5385a81-f734-4486-8a79-5e85a4e43ecc
+[I 13:35:06.825 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 13:35:06.826 NotebookApp] The Jupyter Notebook is running at:
+[I 13:35:06.826 NotebookApp] http://ip-172-31-34-72:8888/
+[I 13:35:06.826 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:35:06.831 NotebookApp] No web browser found: could not locate runnable browser.
+[I 13:35:19.632 NotebookApp] Creating new notebook in 
+[I 13:35:25.421 NotebookApp] Kernel started: 82aed721-752a-4c31-9114-48e4bd7bc5d5
+[I 13:37:30.873 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:39:25.339 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:41:25.369 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:43:25.366 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:45:27.105 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:47:25.369 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:49:25.369 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:51:25.310 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:53:25.314 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:55:25.410 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:57:26.127 NotebookApp] Saving file at /Untitled.ipynb
+[I 13:59:25.772 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:01:25.319 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:03:25.370 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:05:25.377 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:07:30.032 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:09:25.327 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:11:25.301 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:13:25.351 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:15:25.333 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:17:25.317 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:19:25.389 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:21:25.431 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:23:25.293 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:25:25.326 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:27:26.087 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:45:25.305 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:47:25.289 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:49:25.277 NotebookApp] Saving file at /Untitled.ipynb
+[I 14:51:26.081 NotebookApp] Saving file at /Untitled.ipynb
+[I 15:07:26.086 NotebookApp] Saving file at /Untitled.ipynb
+[I 15:21:16.705 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:21:20.156 NotebookApp] Kernel started: 07478ab9-c0dd-48b0-83e7-701e95b80b73
+[I 15:23:21.131 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:25:21.030 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:25:26.494 NotebookApp] Kernel shutdown: 82aed721-752a-4c31-9114-48e4bd7bc5d5
+[W 15:25:28.210 NotebookApp] delete /Untitled.ipynb
+[I 15:27:20.072 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:29:20.050 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:31:20.078 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:33:20.097 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:35:20.074 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:37:20.056 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:39:21.021 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:43:20.054 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:45:20.057 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:46:18.922 NotebookApp] 302 GET / (92.118.160.41) 0.53ms
+[I 15:46:19.260 NotebookApp] 302 GET /tree (92.118.160.41) 0.73ms
+[I 15:47:20.050 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:49:20.072 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:51:20.046 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:53:20.057 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:55:20.026 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:15:49.979 NotebookApp] 302 GET / (59.22.177.6) 0.56ms
+[I 17:16:57.375 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:17:05.861 NotebookApp] Starting buffering for 07478ab9-c0dd-48b0-83e7-701e95b80b73:aa9a68a4a2194a5ea6a03a19f01a3b13
+[I 17:18:47.532 NotebookApp] Saving file at /lambda_crawer/bookpal_tobe.py
+[I 17:19:30.633 NotebookApp] Saving file at /lambda_crawer/bookpal_tobe.py
+[I 17:19:53.937 NotebookApp] Saving file at /lambda_crawer/joara_tobe.py
+[I 17:20:02.629 NotebookApp] Creating new file in /lambda_crawer
+[I 17:22:21.995 NotebookApp] Interrupted...
+[I 17:22:21.996 NotebookApp] Shutting down 1 kernel
+[I 17:22:22.300 NotebookApp] Kernel shutdown: 07478ab9-c0dd-48b0-83e7-701e95b80b73
+[I 17:26:57.997 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 17:26:57.997 NotebookApp] The Jupyter Notebook is running at:
+[I 17:26:57.997 NotebookApp] http://ip-172-31-34-72:8888/
+[I 17:26:57.997 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 17:26:58.003 NotebookApp] No web browser found: could not locate runnable browser.
+[I 17:27:44.230 NotebookApp] Saving file at /lambda_crawer/tocsoda_tobe.py
+[I 17:27:51.089 NotebookApp] Interrupted...
+[I 17:27:51.090 NotebookApp] Shutting down 0 kernels

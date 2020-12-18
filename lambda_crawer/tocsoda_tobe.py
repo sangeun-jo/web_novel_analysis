@@ -7,9 +7,9 @@ from pytz import timezone
 from bs4 import BeautifulSoup 
 import re
 
+
 s3 = boto3.resource('s3')
 bucket = s3.Bucket('web-novel-db')
-key = 'bookpal-tobe.csv'
 
 def get_driver():
     chrome_options = Options()
@@ -32,33 +32,38 @@ def get_driver():
     
     driver = webdriver.Chrome('/opt/python/bin/chromedriver', chrome_options=chrome_options)
     return driver
-    
-    
-def lambda_handler(event, context): 
+
+def tocsoda_tobe(category):
     
     driver = get_driver()
-    driver.get('https://novel.bookpal.co.kr/novel@best?depth=list_search')
+    driver.get('http://www.tocsoda.co.kr/totalBestView/' + category)
     
-    time.sleep(1)  
+    time.sleep(1)
     
     html = driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
+    data = soup.select_one('#TOTAL_PRODUCT_LIST')
     
-    titles = soup.find_all('div', class_='title') 
-    gks = soup.find_all('p', class_='info m-t-m clear-f')
-    introes = soup.find_all('p', class_='summary') 
+    titles = data.find_all('span', class_='txt')
+    genres = data.find_all('span', class_='total')
+    introes = data.find_all('p', class_='desc')
     
-    local_file_name = '/tmp/bookpal-tobe.csv'
+    if category == '00023':
+        key = 'tocsoda-tobe-web.csv'
+        local_file_name = '/tmp/tocsoda-tobe-web.csv'
+    else:
+        key = 'tocsoda-tobe-free.csv'
+        local_file_name = '/tmp/tocsoda-tobe-free.csv'
     bucket.download_file(key, local_file_name)
     date = datetime.now(timezone('Asia/Seoul')).strftime('%Y%m%d')
     
-    for tit, gk, intr in zip(titles, gks, introes):
-        title = tit.text.strip()
-        genre = re.search(r'\[(.*?)\]', gk.text).group() 
-        intro = gk.text.replace(genre, '') + ' ' + intr.text
+    for title, genre,intro  in zip(titles, genres, introes):
+        title = title.text.strip()
+        genre = re.search(r'\[(.*?)\]', genre.text).group() 
+        intro = intro.text
         
-        book_info = [date, genre,title, intro] 
-        
+        book_info = [date, title, genre, intro]
+
         f = open(local_file_name, 'a',  encoding='utf-8-sig', newline='')
         wr = csv.writer(f)
         wr.writerow(book_info)
@@ -67,3 +72,7 @@ def lambda_handler(event, context):
     bucket.upload_file(local_file_name, key)
     
     driver.close()
+
+def lambda_handler(event, context): 
+    tocsoda_tobe('00023')
+    tocsoda_tobe('00024')
