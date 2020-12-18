@@ -77,3 +77,101 @@
 [W 19:43:03.107 NotebookApp] /srv/web_novel_analysis/chromedriver is not UTF-8 encoded
 [W 19:43:03.107 NotebookApp] 400 GET /api/contents/chromedriver?type=file&format=text&_=1608061383331 (59.22.177.6) 59.96ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/edit/chromedriver
 [W 19:43:36.846 NotebookApp] delete /chromedriver
+[I 07:38:46.356 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 07:38:46.356 NotebookApp] The Jupyter Notebook is running at:
+[I 07:38:46.356 NotebookApp] http://ip-172-31-34-72:8888/
+[I 07:38:46.356 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 07:38:46.361 NotebookApp] No web browser found: could not locate runnable browser.
+[I 07:40:58.825 NotebookApp] Creating new notebook in /web_novel_analysis
+[I 07:41:03.289 NotebookApp] Kernel started: b6e32243-d23a-4236-98d3-b18734a69d11
+[I 07:41:45.677 NotebookApp] New terminal with automatic name: 1
+[I 07:43:04.000 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 07:46:28.987 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 07:48:29.247 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 07:50:28.515 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 07:52:28.541 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:00:28.566 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:02:29.054 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:04:28.504 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:06:28.502 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:10:28.528 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:12:29.937 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:16:29.037 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:18:28.522 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:20:28.963 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:24:28.494 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:26:43.982 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:38:28.489 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:40:28.507 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:42:28.491 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:44:28.487 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:46:28.475 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:48:28.943 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:50:28.467 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:52:28.907 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:53:07.117 NotebookApp] New terminal with automatic name: 2
+[I 08:54:28.472 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:56:28.461 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 08:58:35.929 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 11:40:28.331 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 12:06:36.651 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 12:07:51.311 NotebookApp] 302 GET / (59.22.177.6) 0.48ms
+[I 12:27:00.118 NotebookApp] 302 GET / (59.22.177.6) 0.52ms
+[I 12:27:42.170 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 12:27:50.423 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 12:27:57.483 NotebookApp] Starting buffering for b6e32243-d23a-4236-98d3-b18734a69d11:528a6f817b2f474ab81e8f10e72980c4
+[I 15:09:47.550 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:12:00.989 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:13:46.728 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:15:51.336 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:17:47.520 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:23:47.841 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 20:45:26.914 NotebookApp] 302 GET / (54.193.69.155) 0.53ms
+[I 23:57:20.812 NotebookApp] 302 GET / (183.136.225.45) 0.51ms
+[I 23:57:21.000 NotebookApp] 302 GET /tree? (183.136.225.45) 0.69ms
+[I 00:32:32.121 NotebookApp] 302 GET / (209.17.97.50) 0.59ms
+[W 04:17:09.327 NotebookApp] 404 GET http://nginx.korsangazi.com/scan.html (185.250.240.110) 8.47ms referer=None
+[I 08:06:45.933 NotebookApp] 302 GET / (183.136.225.45) 0.51ms
+[I 08:06:48.245 NotebookApp] 302 GET /tree? (183.136.225.45) 0.64ms
+[I 10:54:39.364 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 10:54:39.365 NotebookApp] The Jupyter Notebook is running at:
+[I 10:54:39.365 NotebookApp] http://ip-172-31-34-72:8888/
+[I 10:54:39.365 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 10:54:39.370 NotebookApp] No web browser found: could not locate runnable browser.
+[I 10:54:43.581 NotebookApp] 302 GET / (59.22.177.6) 0.60ms
+[I 10:55:13.813 NotebookApp] Creating new notebook in 
+[I 10:55:17.355 NotebookApp] Kernel started: 05d2d951-aa30-4065-9b4c-c7a1442d594c
+[I 10:55:33.594 NotebookApp] Kernel interrupted: 05d2d951-aa30-4065-9b4c-c7a1442d594c
+[I 10:57:17.532 NotebookApp] Saving file at /Untitled.ipynb
+[I 10:59:18.298 NotebookApp] Saving file at /Untitled.ipynb
+[I 11:20:52.909 NotebookApp] Starting buffering for 05d2d951-aa30-4065-9b4c-c7a1442d594c:be7a663434384997845423fb17a8fe6a
+[I 11:20:59.012 NotebookApp] Kernel shutdown: 05d2d951-aa30-4065-9b4c-c7a1442d594c
+[W 11:20:59.319 NotebookApp] delete /Untitled.ipynb
+[I 11:21:23.535 NotebookApp] Creating new directory in 
+[I 11:22:28.885 NotebookApp] Creating new notebook in /lambda_crawer
+[I 11:22:35.545 NotebookApp] Kernel started: adfeaf94-c0c2-4d32-8559-00e84bbe27b9
+[W 11:23:33.041 NotebookApp] 404 GET /api/contents/lambda_crawer/joara_tobe.py?type=notebook&content=0&_=1608290552187 (59.22.177.6): No such file or directory: lambda_crawer/joara_tobe.py
+[W 11:23:33.041 NotebookApp] No such file or directory: lambda_crawer/joara_tobe.py
+[W 11:23:33.041 NotebookApp] 404 GET /api/contents/lambda_crawer/joara_tobe.py?type=notebook&content=0&_=1608290552187 (59.22.177.6) 1.27ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/notebooks/lambda_crawer/Untitled.ipynb?kernel_name=python3
+[I 11:23:33.070 NotebookApp] Uploading file to /lambda_crawer/joara_tobe.py
+[I 11:24:40.175 NotebookApp] 302 GET /notebooks/lambda_crawer/joara_tobe.py (59.22.177.6) 1.09ms
+[I 11:24:40.856 NotebookApp] Starting buffering for adfeaf94-c0c2-4d32-8559-00e84bbe27b9:df772969ad76472baf0a06ac2c8f1cee
+[W 11:25:04.926 NotebookApp] delete /lambda_crawer/joara_tobe.py
+[I 11:25:08.606 NotebookApp] Kernel started: c5385a81-f734-4486-8a79-5e85a4e43ecc
+[I 11:25:43.595 NotebookApp] Saving file at /lambda_crawer/Untitled.ipynb
+[I 11:27:08.275 NotebookApp] Saving file at /lambda_crawer/Untitled.ipynb
+[I 11:27:23.524 NotebookApp] Starting buffering for c5385a81-f734-4486-8a79-5e85a4e43ecc:2a890cc3248c478690d1d2e0d85dbd71
+[I 11:27:55.346 NotebookApp] Starting buffering for c5385a81-f734-4486-8a79-5e85a4e43ecc:25ebaac009d4465085bf76a6274a46ea
+[I 11:28:27.484 NotebookApp] Starting buffering for c5385a81-f734-4486-8a79-5e85a4e43ecc:38c4bd1f65d048ef836d37e7c7ab1077
+[W 11:29:04.845 NotebookApp] delete /scrapy_ex
+[W 11:29:47.426 NotebookApp] delete /lambda_crawer/joara_tobe.py
+[I 11:29:54.694 NotebookApp] Creating new file in /lambda_crawer
+[I 11:30:08.265 NotebookApp] Saving file at /lambda_crawer/untitled.txt
+[I 11:30:25.909 NotebookApp] Creating new file in /lambda_crawer
+[W 11:31:27.259 NotebookApp] delete /bookpal_todaybest.py
+[W 11:31:27.260 NotebookApp] delete /tocsoda_todaybest.py
+[W 11:31:27.262 NotebookApp] delete /joara_todaybest.py
+[I 11:31:43.536 NotebookApp] Interrupted...
+[I 11:31:43.536 NotebookApp] Shutting down 2 kernels
+[I 11:31:43.844 NotebookApp] Kernel shutdown: adfeaf94-c0c2-4d32-8559-00e84bbe27b9
+[I 11:31:43.844 NotebookApp] Kernel shutdown: c5385a81-f734-4486-8a79-5e85a4e43ecc
