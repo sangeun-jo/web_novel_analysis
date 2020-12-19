@@ -16,9 +16,8 @@ def main(request):
 
 @csrf_exempt
 def result(request):
-	qs = TodayBest.objects.all()
-	filtered = filtering(request, qs)
-	if not filtered:	
+	filtered = filtering(request, 'bookpal-tobe.csv')
+	if filtered.empty:	
 		return render(request, 'bookpal/analysis.html', {'none':'검색결과가 없습니다.'})
 	w_keyword = get_tags(filtered)
 	b_keyword = get_tags(filtered, 20)
@@ -27,8 +26,6 @@ def result(request):
 	return render(request, 'bookpal/analysis.html', {
 		'wordcloud':wordcloud(w_keyword), 
 		'pie_graph':pie_graph(filtered),  
-		'bar_graph':bar_graph(b_keyword), 
-		#'genre':form.data['genre'], 
-		#'term':form.data['term'],
+		'bar_graph':bar_graph(b_keyword)
 	})
 	

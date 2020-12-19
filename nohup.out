@@ -253,3 +253,172 @@
 [I 17:27:44.230 NotebookApp] Saving file at /lambda_crawer/tocsoda_tobe.py
 [I 17:27:51.089 NotebookApp] Interrupted...
 [I 17:27:51.090 NotebookApp] Shutting down 0 kernels
+[I 17:33:49.307 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 17:33:49.308 NotebookApp] The Jupyter Notebook is running at:
+[I 17:33:49.308 NotebookApp] http://ip-172-31-34-72:8888/
+[I 17:33:49.308 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 17:33:49.312 NotebookApp] No web browser found: could not locate runnable browser.
+[I 17:34:03.738 NotebookApp] 302 GET / (59.22.177.6) 0.56ms
+[I 05:01:57.275 NotebookApp] 302 GET / (193.86.95.34) 0.66ms
+[I 05:01:58.147 NotebookApp] 302 GET / (193.86.95.34) 0.59ms
+[I 05:01:58.848 NotebookApp] 302 GET / (193.86.95.34) 0.46ms
+[I 06:05:38.221 NotebookApp] 302 GET / (209.17.96.178) 0.52ms
+[I 06:05:38.621 NotebookApp] 302 GET /tree (209.17.96.178) 0.67ms
+[I 06:45:44.683 NotebookApp] 302 GET / (176.85.220.153) 0.55ms
+[I 08:02:39.332 NotebookApp] 302 GET / (209.17.96.154) 0.62ms
+[I 08:57:33.034 NotebookApp] 302 GET / (59.22.177.6) 0.53ms
+[I 09:03:44.943 NotebookApp] Kernel started: 4318cff9-ba99-4447-a9b0-ef1402a4a556
+[I 09:04:42.329 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:06:42.340 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:08:42.343 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:10:42.358 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:12:42.303 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:14:42.343 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:16:42.355 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:18:42.919 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:22:42.313 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:26:42.348 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:28:42.304 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:30:42.284 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 09:32:42.316 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 13:28:06.219 NotebookApp] 302 GET / (196.52.43.112) 0.64ms
+[I 14:00:42.042 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:02:42.018 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:04:42.019 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:06:42.014 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:08:42.020 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:10:41.996 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:12:41.997 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:14:42.020 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:16:42.026 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:18:42.015 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:20:41.980 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:22:41.991 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:24:42.040 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:26:43.246 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:28:42.616 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:36:42.001 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:38:42.776 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:40:42.580 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:42:42.000 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:44:42.572 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:46:41.982 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:48:42.996 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:50:42.550 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:52:41.955 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 14:54:41.957 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:52:42.305 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:54:41.911 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:56:41.917 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 15:58:41.889 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:00:41.899 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:02:41.883 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:04:41.954 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:06:41.901 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:08:42.477 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:10:41.907 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:12:41.867 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:14:41.862 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:16:41.856 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:18:41.887 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:24:50.873 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 16:30:43.193 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 16:35:21.952 NotebookApp] Saving file at /joara/views.py
+[I 16:36:12.769 NotebookApp] Saving file at /joara/views.py
+[I 16:37:19.809 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 16:50:41.909 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:52:41.818 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 16:54:42.524 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:00:42.863 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:02:41.874 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:04:41.819 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:06:41.821 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:08:42.402 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:10:41.824 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:12:42.394 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:14:42.429 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:16:42.646 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:22:41.801 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:24:41.825 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:26:42.408 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:28:41.779 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:30:41.785 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:32:41.794 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:34:41.799 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:36:41.793 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:38:41.841 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:40:42.044 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:42:24.605 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 17:42:42.392 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:43:54.457 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 17:45:03.847 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 17:46:41.765 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:49:50.883 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 17:52:42.865 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:53:20.418 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 17:56:42.355 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 17:58:42.358 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:00:24.861 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 18:00:42.716 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:02:41.750 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:04:42.379 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:06:41.746 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:08:41.756 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:10:41.758 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:12:41.752 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:14:41.764 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:16:41.782 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:18:41.743 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:19:16.821 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 18:20:42.326 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:21:49.812 NotebookApp] Saving file at /joara/forms.py
+[I 18:22:35.429 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 18:28:43.470 NotebookApp] Saving file at /joara/views.py
+[I 18:30:41.771 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:32:41.715 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:38:42.414 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:40:41.736 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:42:42.356 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:44:41.711 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:46:41.716 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:47:18.350 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 18:48:06.780 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 18:50:41.728 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:52:41.784 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:54:42.310 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:56:38.380 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 18:56:42.402 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 18:58:20.166 NotebookApp] Saving file at /tocsoda/forms.py
+[I 18:59:40.225 NotebookApp] Saving file at /bookpal/forms.py
+[I 19:00:18.176 NotebookApp] Saving file at /bookpal/views.py
+[I 19:03:21.583 NotebookApp] Saving file at /tocsoda/views.py
+[I 19:03:44.616 NotebookApp] Saving file at /bookpal/views.py
+[I 19:05:03.375 NotebookApp] Saving file at /tocsoda/views.py
+[I 19:06:17.146 NotebookApp] Saving file at /bookpal/views.py
+[I 19:08:42.349 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:10:41.809 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:12:41.691 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:14:42.673 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:22:37.807 NotebookApp] Creating new file in 
+[I 19:23:00.384 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 19:23:48.228 NotebookApp] Saving file at /web_novel_analysis/base.py
+[W 19:27:56.828 NotebookApp] delete /rootkey.txt
+[I 19:28:42.571 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:30:42.287 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:31:42.113 NotebookApp] Saving file at /rootkey.txt
+[I 19:32:41.732 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:33:25.626 NotebookApp] Saving file at /rootkey.txt
+[I 19:34:42.318 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:35:02.842 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 19:36:41.660 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:44:42.257 NotebookApp] Saving file at /web_novel_analysis/s3_test.ipynb
+[I 19:45:54.355 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 19:46:46.677 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 19:49:25.612 NotebookApp] Starting buffering for 4318cff9-ba99-4447-a9b0-ef1402a4a556:27d397fd61ac43e08943e7ba141163d0
+[W 19:58:17.414 NotebookApp] delete /uwsgi.service
+[I 20:04:02.969 NotebookApp] Saving file at /bookpal/views.py
+[I 20:04:39.914 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 20:05:34.384 NotebookApp] Saving file at /web_novel_analysis/base.py
+[I 20:06:02.819 NotebookApp] Saving file at /tocsoda/views.py
+[I 20:06:41.967 NotebookApp] Saving file at /joara/views.py
+[W 20:12:20.095 NotebookApp] delete /db.sqlite3

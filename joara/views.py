@@ -22,16 +22,16 @@ def main(request):
 
 @csrf_exempt
 def result(request):
-	qs = TodayBest.objects.all()
-	filtered = filtering(request, qs)
-	if not filtered:	
+	#qs = TodayBest.objects.all()
+	filtered = filtering(request, 'joara-tobe.csv')
+	if filtered.empty:	
 		return render(request, 'joara/analysis.html', {'none':'검색결과가 없습니다.'})
 	w_keyword = get_tags(filtered)
 	b_keyword = get_tags(filtered, 20)
 	return render(request, 'joara/analysis.html', {
 	'wordcloud':wordcloud(w_keyword), 
 	'pie_graph':pie_graph(filtered),  
-	'bar_graph':bar_graph(b_keyword), 
+	'bar_graph':bar_graph(b_keyword) 
 	})
 
 	

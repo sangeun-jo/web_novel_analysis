@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from joara.models import TodayBest as joara
-from bookpal.models import TodayBest as bookpal
 import re, io
 from konlpy.tag import Twitter
 from collections import Counter
@@ -10,7 +8,30 @@ from matplotlib import font_manager, rc
 import requests
 import time, datetime
 from wordcloud import WordCloud
+import os
+import boto3
+import pandas as pd
+from io import StringIO
+from pytz import timezone 
 
+#======== s3 모듈 ===========
+
+def read_data_from_s3(db_name):
+    
+    f = open("/home/ubuntu/Downloads/rootkey.txt", 'r')
+    rootkey = f.read().splitlines()
+    f.close()
+    
+    aws_id = rootkey[0]
+    aws_secret = rootkey[1]
+    
+    bucket_name = 'web-novel-db'
+    object_key = db_name
+    client = boto3.client('s3',aws_access_key_id= aws_id, aws_secret_access_key=aws_secret)
+    csv_obj = client.get_object(Bucket=bucket_name, Key=object_key)
+    body = csv_obj['Body']
+    csv_string = body.read().decode('utf-8')
+    return pd.read_csv(StringIO(csv_string))
 
 #======== 검색 모듈 ========== 
 
@@ -20,32 +41,28 @@ def search(request):
 
 #==========키워드 분석 모듈 ===========
 
-#쿼리셋 주면 데이터 전처리해서 단어 개수 세어줌 
-def get_tags(data, ntags=50): #상위 100개만 추출(나중에 사용자한테 입력받게 하는 것도 고려)
-	hangul = re.compile('[^ a-zA-Z0-9ㄱ-ㅣ가-힣]+') 
+#데이터 전처리
+def get_tags(data, ntags=50): #상위 50개만 추출
+    hangul = re.compile('[^ a-zA-Z0-9ㄱ-ㅣ가-힣]+') 
 
-	txt = ''
+    txt = ''
 
-	if type(data) == list:
-		for nov in data:
-			txt = txt + ' ' + nov
-	else: 
-		for nov in data:
-			txt = txt + ' ' + nov.title + ' ' + nov.intro
-
-	cleaned_text = hangul.sub(' ', txt)
-	spliter = Twitter()
-	nouns = spliter.nouns(cleaned_text)
-	nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
-	count = Counter(nouns)
-	return_dict = {}
-
-	#return_dict = {n, c in cont.most_common(ntags) if n not in ['표지', '소설', '그녀', '무료', '연재']}
-	for n, c in count.most_common(ntags):
-		#if n == '표지' or n == '소설':
-		if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']:
-			return_dict[n] = c
-	return return_dict
+    data = data.title.values.tolist() + data.intro.tolist()
+    
+    for nov in data:
+            txt = txt + ' ' + nov
+    
+    cleaned_text = hangul.sub(' ', txt)
+    spliter = Twitter()
+    nouns = spliter.nouns(cleaned_text)
+    nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
+    count = Counter(nouns)
+    return_dict = {}
+    
+    for n, c in count.most_common(ntags):
+        if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']:
+            return_dict[n] = c
+    return return_dict
 
 def wordcloud(keyword):
 	wc = WordCloud(font_path='/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf',  
@@ -84,8 +101,6 @@ def bar_graph(keyword):
 		keys.append(key)
 		values.append(keyword[key])
 	plt.bar(range(len(values)), values)
-	#plt.xlabel('인기 키워드')
-	#plt.ylabel('빈도수')
 	plt.xticks(range(len(keys)),keys, rotation=40)
 	plt.bar(range(len(values)), values)
 	image = io.BytesIO()
@@ -99,18 +114,14 @@ def bar_graph(keyword):
 
 #=======장르 분석 모듈 ==========
 
-def pie_graph(qs):
+def pie_graph(df):
 	try:
 		font_name = font_manager.FontProperties(fname="C:/Windows/Fonts/malgun.ttf").get_name()
 	except:
 		font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf").get_name()
 	rc('font', family=font_name)
-	genre = []
-	rat = []
-	for nov in qs:
-		nov.genre
-		genre.append(nov.genre)
-		rat = Counter(genre)
+	genre = df.genre.values.tolist()
+	rat = Counter(genre)
 	group_name = []
 	group_size = []
 	for genre in rat:
@@ -137,47 +148,19 @@ def pie_graph(qs):
 
 #======= 필터링 모듈 =========
 
-def filtering(request, qs):
-	# 빈 쿼리셋 만들기
-	genredata = qs.none()
-	termdata = qs.none()
-	#form = optionForm(request.POST)
-
-	# 장르 필터링
-	genres = request.POST.getlist('genre') # 체크박스에 선택된 장르 가져오기
-	for gen in genres:
-		gen = '['+gen+']'
-		filtered_genre = qs.filter(genre__iexact=gen)
-		if filtered_genre: 
-			genredata = genredata.union(filtered_genre)
-	
-	# 1일, 1주일, 한달 간격 데이터 반환 시 사용.
-	
-	term = int(request.POST['term'])
-
-	for day in range(0, term): 
-		d = datetime.timedelta(days = day)
-		_d = datetime.datetime.now() - d
-		year = str(_d.year)
-		mon = str(_d.month).zfill(2)
-		day = str(_d.day).zfill(2)
-		date = year+mon+day
-		filtered_date = qs.filter(date__iexact=date)
-		if filtered_date:
-			termdata = termdata.union(filtered_date)
-
-	'''
-	# 시작날짜, 끝날짜 주면 그 사이에 있는 데이터 반환함. 캘린더로 입력 받을 시 사용
-	d = datetime.timedelta(days = int(request.POST['term'])) # n 일전 날짜 구하기 
-	_d = datetime.datetime.now() - d 
-	year = str(_d.year)
-	mon = str(_d.month).zfill(2)
-	day = str(_d.day).zfill(2)
-	start_date = year+mon+day
-	termdata = qs.filter(date__range=[start_date, get_str_date()])
-	'''	
-	return termdata.intersection(genredata)
-
+def filtering(request, db_name):
+    
+    df = read_data_from_s3(db_name)
+    
+    term = int(request.POST['term'])
+    genres = request.POST.getlist('genre')
+    
+    today = datetime.datetime.now(timezone('Asia/Seoul'))
+    start = today - datetime.timedelta(days = term-1)
+    end_day = int(today.strftime('%Y%m%d')) 
+    start_day = int(start.strftime('%Y%m%d')) 
+    
+    return df[(start_day <= df['date']) & (df['date'] <= end_day) & (df['genre'].isin(genres))]
 
 # ========= 기타 유용한 모듈들 =========
 
