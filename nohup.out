@@ -422,3 +422,785 @@
 [I 20:06:02.819 NotebookApp] Saving file at /tocsoda/views.py
 [I 20:06:41.967 NotebookApp] Saving file at /joara/views.py
 [W 20:12:20.095 NotebookApp] delete /db.sqlite3
+[I 08:05:52.995 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 08:05:52.996 NotebookApp] The Jupyter Notebook is running at:
+[I 08:05:52.996 NotebookApp] http://ip-172-31-34-72:8888/
+[I 08:05:52.996 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:05:53.001 NotebookApp] No web browser found: could not locate runnable browser.
+[W 08:05:55.147 NotebookApp] 404 GET /tree/novel (59.22.177.6) 25.67ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/login?next=%2Ftree%3F
+[I 08:05:58.750 NotebookApp] 302 GET / (59.22.177.6) 0.54ms
+[I 08:08:48.426 NotebookApp] Interrupted...
+[I 08:08:48.426 NotebookApp] Shutting down 0 kernels
+[I 08:10:33.031 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 08:10:33.031 NotebookApp] The Jupyter Notebook is running at:
+[I 08:10:33.031 NotebookApp] http://ip-172-31-34-72:8888/
+[I 08:10:33.031 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:10:33.036 NotebookApp] No web browser found: could not locate runnable browser.
+[I 08:19:53.211 NotebookApp] Interrupted...
+[I 08:19:53.212 NotebookApp] Shutting down 0 kernels
+[I 08:20:59.002 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 08:20:59.002 NotebookApp] The Jupyter Notebook is running at:
+[I 08:20:59.002 NotebookApp] http://ip-172-31-34-72:8888/
+[I 08:20:59.002 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:20:59.007 NotebookApp] No web browser found: could not locate runnable browser.
+[I 08:21:14.692 NotebookApp] Interrupted...
+[I 08:21:14.692 NotebookApp] Shutting down 0 kernels
+[I 08:27:01.380 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 08:27:01.380 NotebookApp] The Jupyter Notebook is running at:
+[I 08:27:01.380 NotebookApp] http://ip-172-31-34-72:8888/
+[I 08:27:01.380 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:27:01.385 NotebookApp] No web browser found: could not locate runnable browser.
+[W 08:27:02.658 NotebookApp] Forbidden
+[W 08:27:02.658 NotebookApp] 403 GET /api/sessions?_=1610871662013 (59.22.177.6) 1.11ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree
+[W 08:27:02.660 NotebookApp] Forbidden
+[W 08:27:02.661 NotebookApp] 403 GET /api/terminals?_=1610871662014 (59.22.177.6) 0.68ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree
+[I 08:27:04.363 NotebookApp] 302 GET /tree (59.22.177.6) 0.76ms
+[I 08:27:09.674 NotebookApp] 302 POST /login?next=%2Ftree (59.22.177.6) 1.19ms
+[I 08:27:18.793 NotebookApp] Creating new directory in 
+[I 08:27:22.535 NotebookApp] Creating new directory in 
+[I 08:27:28.785 NotebookApp] Creating new directory in 
+[I 08:27:34.785 NotebookApp] Creating new directory in 
+[W 08:27:45.791 NotebookApp] delete /Untitled Folder 1
+[W 08:27:45.795 NotebookApp] delete /Untitled Folder 2
+[W 08:27:45.797 NotebookApp] delete /Untitled Folder 3
+[I 08:32:30.864 NotebookApp] 302 POST /login?next=%2Ftree (59.22.177.6) 1.09ms
+[I 08:33:50.345 NotebookApp] 302 GET /files/static2/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.70ms
+[I 08:33:50.374 NotebookApp] 302 GET /files/static2/css/sb-admin-2.min.css (59.22.177.6) 0.61ms
+[I 08:33:50.500 NotebookApp] 302 GET /files/static2/vendor/jquery/jquery.min.js (59.22.177.6) 0.69ms
+[I 08:33:50.501 NotebookApp] 302 GET /files/static2/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.51ms
+[I 08:33:50.509 NotebookApp] 302 GET /files/static2/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.60ms
+[I 08:33:50.510 NotebookApp] 302 GET /files/static2/img/undraw_posting_photo.svg (59.22.177.6) 0.58ms
+[I 08:33:50.570 NotebookApp] 302 GET /files/static2/js/sb-admin-2.min.js (59.22.177.6) 0.50ms
+[I 08:33:50.573 NotebookApp] 302 GET /files/static2/vendor/chart.js/Chart.min.js (59.22.177.6) 0.45ms
+[I 08:33:50.649 NotebookApp] 302 GET /files/static2/js/demo/chart-area-demo.js (59.22.177.6) 0.65ms
+[I 08:33:50.784 NotebookApp] 302 GET /files/static2/js/demo/chart-pie-demo.js (59.22.177.6) 0.66ms
+[I 08:34:07.564 NotebookApp] 302 GET /files/static2/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.66ms
+[I 08:34:07.568 NotebookApp] 302 GET /files/static2/css/sb-admin-2.min.css (59.22.177.6) 0.44ms
+[I 08:34:07.583 NotebookApp] 302 GET /files/static2/vendor/jquery/jquery.min.js (59.22.177.6) 0.68ms
+[I 08:34:07.584 NotebookApp] 302 GET /files/static2/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.46ms
+[I 08:34:07.585 NotebookApp] 302 GET /files/static2/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.54ms
+[I 08:34:07.586 NotebookApp] 302 GET /files/static2/js/sb-admin-2.min.js (59.22.177.6) 0.47ms
+[I 08:34:07.719 NotebookApp] 302 GET /files/static2/vendor/chart.js/Chart.min.js (59.22.177.6) 0.55ms
+[I 08:34:07.745 NotebookApp] 302 GET /files/static2/js/demo/chart-area-demo.js (59.22.177.6) 0.64ms
+[I 08:34:07.746 NotebookApp] 302 GET /files/static2/js/demo/chart-pie-demo.js (59.22.177.6) 0.45ms
+[I 08:34:07.748 NotebookApp] 302 GET /files/static2/img/undraw_posting_photo.svg (59.22.177.6) 0.45ms
+[I 08:35:14.826 NotebookApp] Creating new file in /static
+[I 08:41:41.192 NotebookApp] Saving file at /static/index.html
+[I 08:43:33.071 NotebookApp] Saving file at /static/index.html
+[I 08:43:37.238 NotebookApp] 302 GET /files/static/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.75ms
+[I 08:43:37.239 NotebookApp] 302 GET /files/static/css/sb-admin-2.min.css (59.22.177.6) 0.45ms
+[I 08:43:37.254 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.52ms
+[I 08:43:37.259 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.50ms
+[I 08:43:37.275 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.61ms
+[I 08:43:37.279 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.48ms
+[I 08:43:37.489 NotebookApp] 302 GET /files/static/vendor/chart.js/Chart.min.js (59.22.177.6) 0.68ms
+[I 08:43:37.490 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.47ms
+[I 08:43:37.494 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.47ms
+[I 08:43:37.495 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.46ms
+[I 08:43:45.272 NotebookApp] Interrupted...
+[I 08:43:45.272 NotebookApp] Shutting down 0 kernels
+[I 08:44:27.743 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 08:44:27.743 NotebookApp] The Jupyter Notebook is running at:
+[I 08:44:27.743 NotebookApp] http://ip-172-31-34-72:8888/
+[I 08:44:27.743 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:44:27.748 NotebookApp] No web browser found: could not locate runnable browser.
+[I 09:11:29.120 NotebookApp] 302 GET /files/static/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.69ms
+[I 09:11:29.121 NotebookApp] 302 GET /files/static/css/sb-admin-2.min.css (59.22.177.6) 0.47ms
+[I 09:11:29.136 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.61ms
+[I 09:11:29.139 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.47ms
+[I 09:11:29.144 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.47ms
+[I 09:11:29.145 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.44ms
+[I 09:11:29.278 NotebookApp] 302 GET /files/static/vendor/chart.js/Chart.min.js (59.22.177.6) 0.66ms
+[I 09:11:29.280 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.45ms
+[I 09:11:29.281 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.46ms
+[I 09:11:29.281 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.46ms
+[I 09:14:15.231 NotebookApp] Saving file at /static/index.html
+[I 09:15:11.949 NotebookApp] Creating new directory in /static
+[I 09:15:36.034 NotebookApp] Creating new directory in /static
+[I 09:16:19.705 NotebookApp] Saving file at /static/index.html
+[I 09:21:00.463 NotebookApp] Uploading file to /static/css/bootstrap.css
+[I 09:21:01.441 NotebookApp] Uploading file to /static/css/bootstrap.min.css
+[I 09:21:02.437 NotebookApp] Uploading file to /static/css/bootstrap.css.map
+[I 09:21:04.487 NotebookApp] Uploading file to /static/css/bootstrap-utilities.rtl.min.css.map
+[I 09:21:05.232 NotebookApp] Uploading file to /static/css/bootstrap-utilities.rtl.min.css
+[I 09:21:05.769 NotebookApp] Uploading file to /static/css/bootstrap-utilities.rtl.css.map
+[I 09:21:06.384 NotebookApp] Uploading file to /static/css/bootstrap-utilities.rtl.css
+[I 09:21:06.914 NotebookApp] Uploading file to /static/css/bootstrap-utilities.min.css.map
+[I 09:21:07.428 NotebookApp] Uploading file to /static/css/bootstrap-utilities.min.css
+[I 09:21:07.958 NotebookApp] Uploading file to /static/css/bootstrap-utilities.css.map
+[I 09:21:08.517 NotebookApp] Uploading file to /static/css/bootstrap-utilities.css
+[I 09:21:09.065 NotebookApp] Uploading file to /static/css/bootstrap-reboot.rtl.min.css.map
+[I 09:21:09.693 NotebookApp] Uploading file to /static/css/bootstrap-reboot.rtl.min.css
+[I 09:21:10.341 NotebookApp] Uploading file to /static/css/bootstrap-reboot.rtl.css.map
+[I 09:21:10.915 NotebookApp] Uploading file to /static/css/bootstrap-reboot.rtl.css
+[I 09:21:11.506 NotebookApp] Uploading file to /static/css/bootstrap-reboot.min.css.map
+[I 09:21:12.045 NotebookApp] Uploading file to /static/css/bootstrap-reboot.min.css
+[I 09:21:12.764 NotebookApp] Uploading file to /static/css/bootstrap-reboot.css.map
+[I 09:21:13.635 NotebookApp] Uploading file to /static/css/bootstrap-reboot.css
+[I 09:21:14.415 NotebookApp] Uploading file to /static/css/bootstrap-grid.rtl.min.css.map
+[I 09:21:14.901 NotebookApp] Uploading file to /static/css/bootstrap-grid.rtl.min.css
+[I 09:21:15.524 NotebookApp] Uploading file to /static/css/bootstrap-grid.rtl.css.map
+[I 09:21:16.112 NotebookApp] Uploading file to /static/css/bootstrap-grid.rtl.css
+[I 09:21:16.646 NotebookApp] Uploading file to /static/css/bootstrap-grid.min.css.map
+[I 09:21:17.282 NotebookApp] Uploading file to /static/css/bootstrap-grid.min.css
+[I 09:21:17.864 NotebookApp] Uploading file to /static/css/bootstrap-grid.css.map
+[I 09:21:18.400 NotebookApp] Uploading file to /static/css/bootstrap-grid.css
+[I 09:21:19.362 NotebookApp] Uploading file to /static/css/bootstrap.rtl.min.css.map
+[I 09:21:19.652 NotebookApp] Saving file at /static/css/bootstrap.rtl.min.css.map
+[I 09:21:20.279 NotebookApp] Uploading file to /static/css/bootstrap.rtl.min.css
+[I 09:21:21.549 NotebookApp] Uploading file to /static/css/bootstrap.rtl.css.map
+[I 09:21:22.116 NotebookApp] Uploading file to /static/css/bootstrap.rtl.css
+[I 09:21:22.975 NotebookApp] Uploading file to /static/css/bootstrap.min.css.map
+[I 09:21:57.822 NotebookApp] Uploading file to /static/js/bootstrap.min.js.map
+[I 09:21:58.362 NotebookApp] Uploading file to /static/js/bootstrap.min.js
+[I 09:21:58.887 NotebookApp] Uploading file to /static/js/bootstrap.js.map
+[I 09:21:59.443 NotebookApp] Uploading file to /static/js/bootstrap.js
+[I 09:21:59.887 NotebookApp] Uploading file to /static/js/bootstrap.esm.min.js.map
+[I 09:22:00.306 NotebookApp] Uploading file to /static/js/bootstrap.esm.min.js
+[I 09:22:00.975 NotebookApp] Uploading file to /static/js/bootstrap.esm.js.map
+[I 09:22:01.569 NotebookApp] Uploading file to /static/js/bootstrap.esm.js
+[I 09:22:02.184 NotebookApp] Uploading file to /static/js/bootstrap.bundle.min.js.map
+[I 09:22:02.579 NotebookApp] Uploading file to /static/js/bootstrap.bundle.min.js
+[I 09:22:03.071 NotebookApp] Uploading file to /static/js/bootstrap.bundle.js.map
+[I 09:22:03.559 NotebookApp] Uploading file to /static/js/bootstrap.bundle.js
+[I 09:23:07.674 NotebookApp] Copying static2/fonts/NanumBarunGothic.ttf to /static2/fonts
+[W 09:23:17.765 NotebookApp] 500 PATCH /api/contents/static2/fonts/NanumBarunGothic-Copy1.ttf (59.22.177.6): Unknown error renaming file: static2/fonts/NanumBarunGothic-Copy1.ttf [Errno 2] No such file or directory: '/srv/web_novel_analysis/static/fonts/NanumBarunGothic-Copy1.ttf'
+[W 09:23:17.765 NotebookApp] Unknown error renaming file: static2/fonts/NanumBarunGothic-Copy1.ttf [Errno 2] No such file or directory: '/srv/web_novel_analysis/static/fonts/NanumBarunGothic-Copy1.ttf'
+[E 09:23:17.765 NotebookApp] {
+      "Host": "ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "51",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|8bfc3ed2|d8f10b88af63484bfe2d10ec503c263f|1610872024",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888",
+      "Referer": "http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree/static2/fonts",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko,en;q=0.9",
+      "Cookie": "csrftoken=fIRafCZJ6Aj5jJBvNH8azkgn8LT4AtXdTLtulcDPcVCz1gZgsHtldunHzQkIG1Op; _xsrf=2|8bfc3ed2|d8f10b88af63484bfe2d10ec503c263f|1610872024; username-ec2-13-209-77-163-ap-northeast-2-compute-amazonaws-com-8888=\"2|1:0|10:1610872350|68:username-ec2-13-209-77-163-ap-northeast-2-compute-amazonaws-com-8888|44:MmJmODllNTUyZjJhNGU4MWIzMzMyYmJmMzQ0ZDNmNTg=|382bd35adf3565963f56e18c0dd4677156afb5aeaef2a523c211d34325fa2ce3\""
+    }
+[E 09:23:17.766 NotebookApp] 500 PATCH /api/contents/static2/fonts/NanumBarunGothic-Copy1.ttf (59.22.177.6) 1.47ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree/static2/fonts
+[I 09:23:38.387 NotebookApp] Creating new directory in /static
+[I 09:28:25.443 NotebookApp] 302 GET /files/static2/css/sb-admin-2.min.css (59.22.177.6) 0.68ms
+[I 09:28:25.448 NotebookApp] 302 GET /files/static2/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.49ms
+[I 09:28:25.464 NotebookApp] 302 GET /files/static2/vendor/jquery/jquery.min.js (59.22.177.6) 0.48ms
+[I 09:28:25.469 NotebookApp] 302 GET /files/static2/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.83ms
+[I 09:28:25.470 NotebookApp] 302 GET /files/static2/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.81ms
+[I 09:28:25.479 NotebookApp] 302 GET /files/static2/js/sb-admin-2.min.js (59.22.177.6) 0.46ms
+[I 09:28:25.772 NotebookApp] 302 GET /files/static2/vendor/chart.js/Chart.min.js (59.22.177.6) 0.64ms
+[I 09:28:25.822 NotebookApp] 302 GET /files/static2/js/demo/chart-pie-demo.js (59.22.177.6) 0.64ms
+[I 09:28:25.823 NotebookApp] 302 GET /files/static2/js/demo/chart-area-demo.js (59.22.177.6) 0.45ms
+[I 09:28:25.828 NotebookApp] 302 GET /files/static2/img/undraw_posting_photo.svg (59.22.177.6) 0.47ms
+[W 09:37:15.736 NotebookApp] delete /static/css/bootstrap-grid.min.css
+[W 09:37:15.737 NotebookApp] delete /static/css/bootstrap-grid.css
+[W 09:37:15.740 NotebookApp] delete /static/css/bootstrap-grid.css.map
+[W 09:37:15.741 NotebookApp] delete /static/css/bootstrap-grid.rtl.css.map
+[W 09:37:15.742 NotebookApp] delete /static/css/bootstrap-grid.min.css.map
+[W 09:37:15.743 NotebookApp] delete /static/css/bootstrap-grid.rtl.css
+[W 09:37:15.769 NotebookApp] delete /static/css/bootstrap-grid.rtl.min.css
+[W 09:37:15.777 NotebookApp] delete /static/css/bootstrap-grid.rtl.min.css.map
+[W 09:37:15.796 NotebookApp] delete /static/css/bootstrap-reboot.css
+[W 09:37:15.802 NotebookApp] delete /static/css/bootstrap-reboot.css.map
+[W 09:37:15.811 NotebookApp] delete /static/css/bootstrap-reboot.min.css
+[W 09:37:15.817 NotebookApp] delete /static/css/bootstrap-reboot.min.css.map
+[W 09:37:15.835 NotebookApp] delete /static/css/bootstrap-reboot.rtl.css
+[W 09:37:15.846 NotebookApp] delete /static/css/bootstrap-reboot.rtl.css.map
+[W 09:37:15.849 NotebookApp] delete /static/css/bootstrap-reboot.rtl.min.css
+[W 09:37:15.863 NotebookApp] delete /static/css/bootstrap-reboot.rtl.min.css.map
+[W 09:37:15.871 NotebookApp] delete /static/css/bootstrap-utilities.css
+[W 09:37:15.990 NotebookApp] delete /static/css/bootstrap-utilities.css.map
+[W 09:37:16.003 NotebookApp] delete /static/css/bootstrap-utilities.min.css
+[W 09:37:16.004 NotebookApp] delete /static/css/bootstrap-utilities.min.css.map
+[W 09:37:16.007 NotebookApp] delete /static/css/bootstrap-utilities.rtl.css
+[W 09:37:16.009 NotebookApp] delete /static/css/bootstrap-utilities.rtl.css.map
+[W 09:37:16.013 NotebookApp] delete /static/css/bootstrap-utilities.rtl.min.css
+[W 09:37:16.020 NotebookApp] delete /static/css/bootstrap-utilities.rtl.min.css.map
+[W 09:37:16.022 NotebookApp] delete /static/css/bootstrap.css
+[W 09:37:16.024 NotebookApp] delete /static/css/bootstrap.css.map
+[W 09:37:16.075 NotebookApp] delete /static/css/bootstrap.min.css
+[W 09:37:16.081 NotebookApp] delete /static/css/bootstrap.min.css.map
+[W 09:37:16.083 NotebookApp] delete /static/css/bootstrap.rtl.css.map
+[W 09:37:16.084 NotebookApp] delete /static/css/bootstrap.rtl.css
+[W 09:37:16.086 NotebookApp] delete /static/css/bootstrap.rtl.min.css.map
+[W 09:37:16.087 NotebookApp] delete /static/css/bootstrap.rtl.min.css
+[W 09:37:27.467 NotebookApp] delete /static/js/bootstrap.bundle.js
+[W 09:37:27.475 NotebookApp] delete /static/js/bootstrap.bundle.js.map
+[W 09:37:27.490 NotebookApp] delete /static/js/bootstrap.bundle.min.js
+[W 09:37:27.496 NotebookApp] delete /static/js/bootstrap.bundle.min.js.map
+[W 09:37:27.498 NotebookApp] delete /static/js/bootstrap.esm.js
+[W 09:37:27.499 NotebookApp] delete /static/js/bootstrap.esm.js.map
+[W 09:37:27.501 NotebookApp] delete /static/js/bootstrap.esm.min.js
+[W 09:37:27.502 NotebookApp] delete /static/js/bootstrap.esm.min.js.map
+[W 09:37:27.507 NotebookApp] delete /static/js/bootstrap.js
+[W 09:37:27.514 NotebookApp] delete /static/js/bootstrap.js.map
+[W 09:37:27.545 NotebookApp] delete /static/js/bootstrap.min.js
+[W 09:37:27.550 NotebookApp] delete /static/js/bootstrap.min.js.map
+[I 09:38:04.095 NotebookApp] Uploading file to /static/js/bootstrap.min.js.map
+[I 09:38:04.449 NotebookApp] Uploading file to /static/js/bootstrap.min.js
+[I 09:38:04.895 NotebookApp] Uploading file to /static/js/bootstrap.js.map
+[I 09:38:05.276 NotebookApp] Uploading file to /static/js/bootstrap.js
+[I 09:38:05.860 NotebookApp] Uploading file to /static/js/bootstrap.bundle.min.js.map
+[I 09:38:06.356 NotebookApp] Uploading file to /static/js/bootstrap.bundle.min.js
+[I 09:38:07.006 NotebookApp] Uploading file to /static/js/bootstrap.bundle.js.map
+[I 09:38:07.529 NotebookApp] Uploading file to /static/js/bootstrap.bundle.js
+[I 09:38:22.336 NotebookApp] Uploading file to /static/css/bootstrap-reboot.min.css.map
+[I 09:38:22.709 NotebookApp] Uploading file to /static/css/bootstrap-reboot.min.css
+[I 09:38:23.150 NotebookApp] Uploading file to /static/css/bootstrap-reboot.css.map
+[I 09:38:23.507 NotebookApp] Uploading file to /static/css/bootstrap-reboot.css
+[I 09:38:23.932 NotebookApp] Uploading file to /static/css/bootstrap-grid.min.css.map
+[I 09:38:24.296 NotebookApp] Uploading file to /static/css/bootstrap-grid.min.css
+[I 09:38:24.692 NotebookApp] Uploading file to /static/css/bootstrap-grid.css.map
+[I 09:38:25.045 NotebookApp] Uploading file to /static/css/bootstrap-grid.css
+[I 09:38:25.922 NotebookApp] Uploading file to /static/css/bootstrap.min.css.map
+[I 09:38:26.056 NotebookApp] Saving file at /static/css/bootstrap.min.css.map
+[I 09:38:26.697 NotebookApp] Uploading file to /static/css/bootstrap.min.css
+[I 09:38:27.264 NotebookApp] Uploading file to /static/css/bootstrap.css.map
+[I 09:38:27.645 NotebookApp] Uploading file to /static/css/bootstrap.css
+[I 09:41:37.420 NotebookApp] Saving file at /static/index.html
+[I 09:41:57.371 NotebookApp] 302 GET /files/static2/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.71ms
+[I 09:41:57.372 NotebookApp] 302 GET /files/static2/css/sb-admin-2.min.css (59.22.177.6) 0.51ms
+[I 09:41:57.383 NotebookApp] 302 GET /files/static2/vendor/jquery/jquery.min.js (59.22.177.6) 0.54ms
+[I 09:41:57.384 NotebookApp] 302 GET /files/static2/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.48ms
+[I 09:41:57.387 NotebookApp] 302 GET /files/static2/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.51ms
+[I 09:41:57.388 NotebookApp] 302 GET /files/static2/js/sb-admin-2.min.js (59.22.177.6) 0.48ms
+[I 09:41:57.538 NotebookApp] 302 GET /files/static2/vendor/chart.js/Chart.min.js (59.22.177.6) 0.48ms
+[I 09:41:57.557 NotebookApp] 302 GET /files/static2/js/demo/chart-area-demo.js (59.22.177.6) 0.49ms
+[I 09:41:57.559 NotebookApp] 302 GET /files/static2/img/undraw_posting_photo.svg (59.22.177.6) 0.48ms
+[I 09:41:57.559 NotebookApp] 302 GET /files/static2/js/demo/chart-pie-demo.js (59.22.177.6) 0.45ms
+[W 09:48:01.217 NotebookApp] delete /static/css/bootstrap-grid.css
+[W 09:48:01.220 NotebookApp] delete /static/css/bootstrap-grid.css.map
+[W 09:48:01.224 NotebookApp] delete /static/css/bootstrap-grid.min.css
+[W 09:48:01.225 NotebookApp] delete /static/css/bootstrap-grid.min.css.map
+[W 09:48:01.243 NotebookApp] delete /static/css/bootstrap-reboot.css
+[W 09:48:01.245 NotebookApp] delete /static/css/bootstrap-reboot.min.css
+[W 09:48:01.246 NotebookApp] delete /static/css/bootstrap-reboot.css.map
+[W 09:48:01.248 NotebookApp] delete /static/css/bootstrap-reboot.min.css.map
+[W 09:48:01.251 NotebookApp] delete /static/css/bootstrap.css
+[W 09:48:01.254 NotebookApp] delete /static/css/bootstrap.css.map
+[W 09:48:01.258 NotebookApp] delete /static/css/bootstrap.min.css
+[W 09:48:01.261 NotebookApp] delete /static/css/bootstrap.min.css.map
+[I 09:48:14.724 NotebookApp] Uploading file to /static/css/bootstrap-reboot.min.css.map
+[I 09:48:15.307 NotebookApp] Uploading file to /static/css/bootstrap-reboot.min.css
+[I 09:48:15.894 NotebookApp] Uploading file to /static/css/bootstrap-reboot.css.map
+[I 09:48:16.399 NotebookApp] Uploading file to /static/css/bootstrap-reboot.css
+[I 09:48:16.730 NotebookApp] Uploading file to /static/css/bootstrap-grid.min.css.map
+[I 09:48:17.316 NotebookApp] Uploading file to /static/css/bootstrap-grid.min.css
+[I 09:48:17.710 NotebookApp] Uploading file to /static/css/bootstrap-grid.css.map
+[I 09:48:33.760 NotebookApp] Uploading file to /static/css/bootstrap-grid.css
+[I 09:48:34.719 NotebookApp] Uploading file to /static/css/bootstrap.min.css.map
+[I 09:48:35.393 NotebookApp] Uploading file to /static/css/bootstrap.min.css
+[I 09:48:36.296 NotebookApp] Uploading file to /static/css/bootstrap.css.map
+[I 09:48:37.037 NotebookApp] Uploading file to /static/css/bootstrap.css
+[I 09:49:36.734 NotebookApp] Uploading file to /static/css/DS_Store
+[W 09:50:03.126 NotebookApp] delete /static/js/bootstrap.bundle.js
+[W 09:50:03.128 NotebookApp] delete /static/js/bootstrap.bundle.js.map
+[W 09:50:03.130 NotebookApp] delete /static/js/bootstrap.bundle.min.js
+[W 09:50:03.133 NotebookApp] delete /static/js/bootstrap.js
+[W 09:50:03.134 NotebookApp] delete /static/js/bootstrap.bundle.min.js.map
+[W 09:50:03.135 NotebookApp] delete /static/js/bootstrap.js.map
+[W 09:50:03.141 NotebookApp] delete /static/js/bootstrap.min.js
+[W 09:50:03.145 NotebookApp] delete /static/js/bootstrap.min.js.map
+[I 09:50:13.626 NotebookApp] Uploading file to /static/js/bootstrap.min.js.map
+[I 09:50:14.077 NotebookApp] Uploading file to /static/js/bootstrap.js.map
+[I 09:50:14.474 NotebookApp] Uploading file to /static/js/bootstrap.js
+[I 09:50:14.902 NotebookApp] Uploading file to /static/js/bootstrap.bundle.min.js.map
+[I 09:50:16.181 NotebookApp] Uploading file to /static/js/bootstrap.bundle.min.js
+[I 09:50:16.814 NotebookApp] Uploading file to /static/js/bootstrap.bundle.js.map
+[I 09:50:17.185 NotebookApp] Uploading file to /static/js/bootstrap.bundle.js
+[I 09:50:17.932 NotebookApp] Uploading file to /static/js/bootstrap.min.js
+[I 09:51:09.439 NotebookApp] Saving file at /static/index.html
+[I 09:52:49.726 NotebookApp] Saving file at /static/index.html
+[I 09:54:49.820 NotebookApp] Saving file at /static/index.html
+[I 09:55:15.279 NotebookApp] Saving file at /static/index.html
+[I 09:55:30.769 NotebookApp] Saving file at /static/index.html
+[I 09:56:02.046 NotebookApp] Creating new file in /static
+[I 09:56:06.987 NotebookApp] Saving file at /static/index.html
+[I 09:56:42.199 NotebookApp] Saving file at /static/index.html
+[W 09:57:02.538 NotebookApp] delete /static/untitled
+[W 09:57:02.540 NotebookApp] delete /static/index.html
+[W 09:57:22.399 NotebookApp] delete /static/untitled
+[W 09:57:22.399 NotebookApp] 404 DELETE /api/contents/static/untitled (59.22.177.6): File or directory does not exist: /srv/web_novel_analysis/static/untitled
+[W 09:57:22.400 NotebookApp] File or directory does not exist: /srv/web_novel_analysis/static/untitled
+[W 09:57:22.400 NotebookApp] 404 DELETE /api/contents/static/untitled (59.22.177.6) 1.29ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree/static
+[W 09:57:32.239 NotebookApp] delete /static/untitled
+[W 09:57:32.239 NotebookApp] 404 DELETE /api/contents/static/untitled (59.22.177.6): File or directory does not exist: /srv/web_novel_analysis/static/untitled
+[W 09:57:32.239 NotebookApp] File or directory does not exist: /srv/web_novel_analysis/static/untitled
+[W 09:57:32.239 NotebookApp] 404 DELETE /api/contents/static/untitled (59.22.177.6) 1.32ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree/static
+[I 09:58:00.665 NotebookApp] Creating new file in /static
+[I 09:58:20.977 NotebookApp] Saving file at /static/untitled.txt
+[I 09:59:37.383 NotebookApp] Saving file at /static/index.html
+[I 09:59:53.369 NotebookApp] Saving file at /static/index.html
+[I 09:59:59.993 NotebookApp] Saving file at /static/index.html
+[I 10:00:08.526 NotebookApp] Saving file at /static/index.html
+[I 10:00:36.011 NotebookApp] Saving file at /static/index.html
+[I 10:14:25.925 NotebookApp] Saving file at /static/index.html
+[I 10:14:42.811 NotebookApp] Saving file at /static/index.html
+[I 10:17:47.019 NotebookApp] Saving file at /static/index.html
+[I 10:18:07.046 NotebookApp] Saving file at /static/index.html
+[I 10:18:55.190 NotebookApp] Saving file at /static/index.html
+[I 10:19:19.617 NotebookApp] Saving file at /static/index.html
+[I 10:19:43.708 NotebookApp] Saving file at /static/index.html
+[I 10:20:05.059 NotebookApp] Saving file at /static/index.html
+[I 10:21:21.455 NotebookApp] Saving file at /static/index.html
+[I 10:24:22.239 NotebookApp] Saving file at /static/index.html
+[I 10:25:32.070 NotebookApp] Saving file at /static/index.html
+[I 10:25:46.648 NotebookApp] Saving file at /static/index.html
+[I 10:26:06.619 NotebookApp] Saving file at /static/index.html
+[I 10:26:21.662 NotebookApp] Saving file at /static/index.html
+[I 10:26:47.943 NotebookApp] Saving file at /static/index.html
+[I 10:27:18.795 NotebookApp] Saving file at /static/index.html
+[I 10:27:28.029 NotebookApp] Saving file at /static/index.html
+[I 10:28:29.338 NotebookApp] Saving file at /static/index.html
+[I 10:38:32.371 NotebookApp] Saving file at /static/index.html
+[I 10:40:23.998 NotebookApp] Saving file at /static/index.html
+[I 10:40:38.260 NotebookApp] 302 GET / (83.97.20.33) 0.57ms
+[I 10:40:38.887 NotebookApp] 302 GET /tree? (83.97.20.33) 0.73ms
+[I 10:40:46.537 NotebookApp] Saving file at /static/index.html
+[I 10:41:13.554 NotebookApp] Saving file at /static/index.html
+[I 10:41:23.581 NotebookApp] Saving file at /static/index.html
+[I 10:42:21.073 NotebookApp] Saving file at /static/index.html
+[I 10:42:49.101 NotebookApp] Saving file at /static/index.html
+[I 10:43:03.346 NotebookApp] Saving file at /static/index.html
+[I 10:43:14.379 NotebookApp] Saving file at /static/index.html
+[I 10:44:07.433 NotebookApp] Saving file at /static/index.html
+[I 10:44:23.495 NotebookApp] Saving file at /static/index.html
+[I 10:47:47.981 NotebookApp] Saving file at /static/index.html
+[I 10:48:45.790 NotebookApp] 302 GET /files/static2/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.69ms
+[I 10:48:45.791 NotebookApp] 302 GET /files/static2/css/sb-admin-2.min.css (59.22.177.6) 0.47ms
+[I 10:48:45.806 NotebookApp] 302 GET /files/static2/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.55ms
+[I 10:48:45.807 NotebookApp] 302 GET /files/static2/vendor/jquery/jquery.min.js (59.22.177.6) 0.83ms
+[I 10:48:45.808 NotebookApp] 302 GET /files/static2/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.85ms
+[I 10:48:45.809 NotebookApp] 302 GET /files/static2/js/sb-admin-2.min.js (59.22.177.6) 0.47ms
+[I 10:48:46.035 NotebookApp] 302 GET /files/static2/vendor/chart.js/Chart.min.js (59.22.177.6) 0.52ms
+[I 10:48:46.037 NotebookApp] 302 GET /files/static2/js/demo/chart-area-demo.js (59.22.177.6) 0.45ms
+[I 10:48:46.045 NotebookApp] 302 GET /files/static2/js/demo/chart-pie-demo.js (59.22.177.6) 0.48ms
+[I 10:48:46.046 NotebookApp] 302 GET /files/static2/img/undraw_posting_photo.svg (59.22.177.6) 0.45ms
+[I 10:50:35.019 NotebookApp] Interrupted...
+[I 10:50:35.019 NotebookApp] Shutting down 0 kernels
+[I 10:50:46.211 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 10:50:46.211 NotebookApp] The Jupyter Notebook is running at:
+[I 10:50:46.212 NotebookApp] http://ip-172-31-34-72:8888/
+[I 10:50:46.212 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 10:50:46.216 NotebookApp] No web browser found: could not locate runnable browser.
+[I 11:16:19.105 NotebookApp] Saving file at /static/index.html
+[I 11:18:28.484 NotebookApp] Saving file at /static/index.html
+[I 11:19:23.199 NotebookApp] Saving file at /static/index.html
+[I 11:21:47.585 NotebookApp] Saving file at /static/index.html
+[I 11:22:13.087 NotebookApp] Saving file at /static/index.html
+[I 11:22:32.599 NotebookApp] Saving file at /static/index.html
+[I 11:30:04.047 NotebookApp] Saving file at /static/index.html
+[I 11:34:59.970 NotebookApp] Saving file at /static/index.html
+[I 11:40:09.280 NotebookApp] Saving file at /static/index.html
+[I 11:40:11.420 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.73ms
+[I 11:41:36.918 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.66ms
+[I 11:41:40.876 NotebookApp] Saving file at /static/index.html
+[I 11:42:22.228 NotebookApp] Saving file at /static/index.html
+[I 11:42:24.478 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.70ms
+[I 11:42:24.481 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.46ms
+[I 11:42:24.498 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.52ms
+[I 11:42:24.500 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.55ms
+[I 11:42:24.501 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.50ms
+[I 11:42:24.501 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.56ms
+[I 11:42:24.703 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.55ms
+[I 11:42:46.012 NotebookApp] Creating new file in /static
+[I 11:42:50.158 NotebookApp] Saving file at /static/index.html
+[I 11:42:51.954 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.79ms
+[I 11:42:51.955 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.47ms
+[I 11:42:51.960 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.48ms
+[I 11:42:51.961 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.46ms
+[I 11:42:51.975 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.56ms
+[I 11:42:51.991 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.47ms
+[I 11:43:20.350 NotebookApp] Saving file at /static/index.html
+[I 11:43:22.217 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.68ms
+[I 11:43:22.224 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.45ms
+[I 11:43:22.235 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.47ms
+[I 11:43:22.243 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.49ms
+[I 11:44:45.320 NotebookApp] Saving file at /static/index.html
+[I 11:44:47.435 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.70ms
+[I 11:44:47.436 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.45ms
+[I 11:44:47.446 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.46ms
+[I 11:44:47.501 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.70ms
+[I 11:44:47.502 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.45ms
+[I 11:44:47.533 NotebookApp] 302 GET /files/static/vendor/chart.js/Chart.min.js (59.22.177.6) 0.67ms
+[I 11:44:48.107 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.48ms
+[I 11:44:48.125 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.51ms
+[I 11:45:57.640 NotebookApp] Saving file at /static/index.html
+[I 11:45:59.962 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.68ms
+[I 11:46:21.088 NotebookApp] Saving file at /static/index.html
+[I 11:47:56.342 NotebookApp] Saving file at /static/index.html
+[I 11:47:58.630 NotebookApp] 302 GET /files/static/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.76ms
+[I 11:47:58.631 NotebookApp] 302 GET /files/static/css/sb-admin-2.min.css (59.22.177.6) 0.49ms
+[I 11:47:58.747 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.69ms
+[I 11:47:58.748 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.46ms
+[I 11:47:58.754 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.46ms
+[I 11:47:58.762 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.49ms
+[I 11:47:58.914 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.64ms
+[I 11:47:58.915 NotebookApp] 302 GET /files/static/vendor/chart.js/Chart.min.js (59.22.177.6) 0.82ms
+[I 11:47:58.916 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.86ms
+[I 11:47:58.917 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.64ms
+[I 11:48:01.469 NotebookApp] 302 GET /files/static/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.71ms
+[I 11:48:01.472 NotebookApp] 302 GET /files/static/css/sb-admin-2.min.css (59.22.177.6) 0.46ms
+[I 11:48:01.599 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.70ms
+[I 11:48:01.600 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.50ms
+[I 11:48:01.601 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.75ms
+[I 11:48:01.601 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.79ms
+[I 11:48:01.706 NotebookApp] 302 GET /files/static/vendor/chart.js/Chart.min.js (59.22.177.6) 0.50ms
+[I 11:48:01.710 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.46ms
+[I 11:48:01.719 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.46ms
+[I 11:48:01.767 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.66ms
+[W 11:48:42.554 NotebookApp] 404 GET /api/contents/static2/index.html?content=0&_=1610880502408 (59.22.177.6): No such file or directory: static2/index.html
+[W 11:48:42.554 NotebookApp] No such file or directory: static2/index.html
+[W 11:48:42.555 NotebookApp] 404 GET /api/contents/static2/index.html?content=0&_=1610880502408 (59.22.177.6) 1.25ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/edit/static2/index.html
+[I 11:48:42.693 NotebookApp] Uploading file to /static2/index.html
+[E 11:48:42.694 NotebookApp] Error while saving file: static2/index.html [Errno 2] No such file or directory: '/srv/web_novel_analysis/static2/index.html'
+    Traceback (most recent call last):
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 473, in save
+        self._save_file(os_path, model['content'], model.get('format'))
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 340, in _save_file
+        with self.atomic_writing(os_path, text=False) as f:
+      File "/usr/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 210, in atomic_writing
+        with atomic_writing(os_path, *args, log=self.log, **kwargs) as f:
+      File "/usr/lib/python3.6/contextlib.py", line 81, in __enter__
+        return next(self.gen)
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/fileio.py", line 107, in atomic_writing
+        fileobj = io.open(path, 'wb', **kwargs)
+    FileNotFoundError: [Errno 2] No such file or directory: '/srv/web_novel_analysis/static2/index.html'
+[W 11:48:42.697 NotebookApp] 500 PUT /api/contents/static2/index.html (59.22.177.6): Unexpected error while saving file: static2/index.html [Errno 2] No such file or directory: '/srv/web_novel_analysis/static2/index.html'
+[W 11:48:42.697 NotebookApp] Unexpected error while saving file: static2/index.html [Errno 2] No such file or directory: '/srv/web_novel_analysis/static2/index.html'
+[E 11:48:42.697 NotebookApp] {
+      "Host": "ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "32494",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|8bfc3ed2|d8f10b88af63484bfe2d10ec503c263f|1610872024",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888",
+      "Referer": "http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/edit/static2/index.html",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko,en;q=0.9",
+      "Cookie": "csrftoken=fIRafCZJ6Aj5jJBvNH8azkgn8LT4AtXdTLtulcDPcVCz1gZgsHtldunHzQkIG1Op; _xsrf=2|8bfc3ed2|d8f10b88af63484bfe2d10ec503c263f|1610872024; username-ec2-13-209-77-163-ap-northeast-2-compute-amazonaws-com-8888=\"2|1:0|10:1610872350|68:username-ec2-13-209-77-163-ap-northeast-2-compute-amazonaws-com-8888|44:MmJmODllNTUyZjJhNGU4MWIzMzMyYmJmMzQ0ZDNmNTg=|382bd35adf3565963f56e18c0dd4677156afb5aeaef2a523c211d34325fa2ce3\""
+    }
+[E 11:48:42.697 NotebookApp] 500 PUT /api/contents/static2/index.html (59.22.177.6) 19.79ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/edit/static2/index.html
+[I 11:48:46.218 NotebookApp] 302 GET /files/static/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.72ms
+[I 11:48:46.223 NotebookApp] 302 GET /files/static/css/sb-admin-2.min.css (59.22.177.6) 0.48ms
+[I 11:48:46.282 NotebookApp] 302 GET /files/static/vendor/jquery/jquery.min.js (59.22.177.6) 0.62ms
+[I 11:48:46.289 NotebookApp] 302 GET /files/static/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.47ms
+[I 11:48:46.304 NotebookApp] 302 GET /files/static/js/sb-admin-2.min.js (59.22.177.6) 0.50ms
+[I 11:48:46.305 NotebookApp] 302 GET /files/static/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.48ms
+[I 11:48:46.356 NotebookApp] 302 GET /files/static/vendor/chart.js/Chart.min.js (59.22.177.6) 0.54ms
+[I 11:48:46.551 NotebookApp] 302 GET /files/static/js/demo/chart-area-demo.js (59.22.177.6) 0.56ms
+[I 11:48:46.597 NotebookApp] 302 GET /files/static/js/demo/chart-pie-demo.js (59.22.177.6) 0.55ms
+[I 11:48:46.598 NotebookApp] 302 GET /files/static/img/undraw_posting_photo.svg (59.22.177.6) 0.49ms
+[I 11:49:03.668 NotebookApp] Saving file at /static3/index.html
+[I 11:49:17.131 NotebookApp] Saving file at /static3/index.html
+[I 11:49:53.441 NotebookApp] Saving file at /static3/index.html
+[I 11:49:55.573 NotebookApp] 302 GET /files/static3/css/sb-admin-2.min.css (59.22.177.6) 0.70ms
+[I 11:49:55.574 NotebookApp] 302 GET /files/static3/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.49ms
+[I 11:49:55.682 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.66ms
+[I 11:49:55.687 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.59ms
+[I 11:49:55.688 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.50ms
+[I 11:49:55.689 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.50ms
+[I 11:49:55.788 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.49ms
+[I 11:49:55.804 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.46ms
+[I 11:49:55.810 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.46ms
+[I 11:49:55.813 NotebookApp] 302 GET /files/static3/img/undraw_posting_photo.svg (59.22.177.6) 0.48ms
+[I 11:50:33.131 NotebookApp] Saving file at /static3/index.html
+[I 11:50:35.332 NotebookApp] 302 GET /files/static3/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.68ms
+[I 11:50:35.390 NotebookApp] 302 GET /files/static3/css/sb-admin-2.min.css (59.22.177.6) 0.60ms
+[I 11:50:35.526 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.48ms
+[I 11:50:35.527 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.53ms
+[I 11:50:35.529 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.76ms
+[I 11:50:35.530 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.45ms
+[I 11:50:35.644 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.64ms
+[I 11:50:35.767 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.48ms
+[I 11:50:35.861 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.69ms
+[I 11:50:35.863 NotebookApp] 302 GET /files/static3/img/undraw_posting_photo.svg (59.22.177.6) 0.45ms
+[I 11:50:57.501 NotebookApp] Saving file at /static3/index.html
+[I 11:51:49.457 NotebookApp] Saving file at /static3/index.html
+[I 11:51:57.362 NotebookApp] 302 GET /files/static3/vendor/fontawesome-free/css/all.min.css (59.22.177.6) 0.69ms
+[I 11:51:57.372 NotebookApp] 302 GET /files/static3/css/sb-admin-2.min.css (59.22.177.6) 0.52ms
+[I 11:51:57.397 NotebookApp] 302 GET /files/static3/img/undraw_posting_photo.svg (59.22.177.6) 0.64ms
+[I 11:51:57.439 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.67ms
+[I 11:51:57.450 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.51ms
+[I 11:51:57.452 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.46ms
+[I 11:51:57.523 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.49ms
+[I 11:51:57.525 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.46ms
+[I 11:51:57.541 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.54ms
+[I 11:51:57.544 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.48ms
+[I 11:53:04.074 NotebookApp] Saving file at /static3/index.html
+[I 11:53:06.615 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.69ms
+[I 11:53:06.620 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.50ms
+[I 11:53:06.637 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.54ms
+[I 11:53:06.638 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.46ms
+[I 11:53:06.639 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.51ms
+[I 11:53:06.639 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.45ms
+[I 11:53:06.802 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.52ms
+[I 11:53:06.842 NotebookApp] 302 GET /files/static3/img/undraw_posting_photo.svg (59.22.177.6) 0.49ms
+[I 11:53:46.634 NotebookApp] Saving file at /static3/index.html
+[I 11:54:30.578 NotebookApp] Saving file at /static3/index.html
+[I 11:54:32.558 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.70ms
+[I 11:54:32.560 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.47ms
+[I 11:54:32.575 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.86ms
+[I 11:54:32.577 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.81ms
+[I 11:54:32.577 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 1.14ms
+[I 11:54:32.578 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.85ms
+[I 11:54:32.727 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.56ms
+[I 11:55:25.622 NotebookApp] Saving file at /static3/index.html
+[I 11:56:28.757 NotebookApp] Saving file at /static3/index.html
+[I 11:56:33.241 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.68ms
+[I 11:56:33.303 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.55ms
+[I 11:56:33.304 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.55ms
+[I 11:56:33.305 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.85ms
+[I 11:56:33.306 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.87ms
+[I 11:56:33.306 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.62ms
+[I 11:56:33.654 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.55ms
+[I 11:56:58.428 NotebookApp] Saving file at /static3/index.html
+[I 11:57:02.597 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.70ms
+[I 11:57:02.598 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.45ms
+[I 11:57:02.617 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.59ms
+[I 11:57:02.618 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.46ms
+[I 11:57:02.619 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.49ms
+[I 11:57:02.620 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.44ms
+[I 11:57:02.840 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.71ms
+[I 11:58:22.095 NotebookApp] Saving file at /static3/index.html
+[I 11:58:24.116 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.71ms
+[I 11:58:24.117 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.54ms
+[I 11:58:24.132 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.48ms
+[I 11:58:24.140 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.48ms
+[I 11:58:24.158 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.67ms
+[I 11:58:24.162 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.54ms
+[I 11:58:24.166 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.47ms
+[I 11:58:55.508 NotebookApp] Saving file at /static3/index.html
+[I 11:58:58.278 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.78ms
+[I 11:58:58.279 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.47ms
+[I 11:58:58.305 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.50ms
+[I 11:58:58.306 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.47ms
+[I 11:58:58.318 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.47ms
+[I 11:58:58.322 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.55ms
+[I 11:58:58.322 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.59ms
+[I 11:59:23.369 NotebookApp] Saving file at /static3/index.html
+[I 11:59:25.911 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.77ms
+[I 11:59:25.912 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.47ms
+[I 11:59:25.929 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.59ms
+[I 11:59:25.933 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.47ms
+[I 11:59:25.935 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.50ms
+[I 11:59:25.936 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.44ms
+[I 11:59:26.009 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.67ms
+[I 11:59:39.241 NotebookApp] Saving file at /static3/index.html
+[I 11:59:41.330 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.71ms
+[I 11:59:41.331 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.49ms
+[I 11:59:41.344 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.97ms
+[I 11:59:41.345 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.84ms
+[I 11:59:41.346 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.53ms
+[I 11:59:41.347 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.59ms
+[I 11:59:41.383 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.65ms
+[I 12:00:56.369 NotebookApp] Saving file at /static3/index.html
+[I 12:00:58.339 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.77ms
+[I 12:00:58.340 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.49ms
+[I 12:00:58.353 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.56ms
+[I 12:00:58.354 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.49ms
+[I 12:00:58.360 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.49ms
+[I 12:00:58.361 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.47ms
+[I 12:00:58.391 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.46ms
+[I 12:02:30.587 NotebookApp] Saving file at /static3/index.html
+[I 12:02:32.561 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.76ms
+[I 12:02:32.562 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.49ms
+[I 12:02:32.572 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.54ms
+[I 12:02:32.574 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.50ms
+[I 12:02:32.577 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.51ms
+[I 12:02:32.580 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.50ms
+[I 12:02:32.604 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.47ms
+[I 12:02:52.104 NotebookApp] Saving file at /static3/index.html
+[I 12:03:05.648 NotebookApp] 302 GET /files/static3/vendor/jquery/jquery.min.js (59.22.177.6) 0.99ms
+[I 12:03:05.649 NotebookApp] 302 GET /files/static3/vendor/bootstrap/js/bootstrap.bundle.min.js (59.22.177.6) 0.96ms
+[I 12:03:05.796 NotebookApp] 302 GET /files/static3/vendor/jquery-easing/jquery.easing.min.js (59.22.177.6) 0.67ms
+[I 12:03:05.797 NotebookApp] 302 GET /files/static3/js/sb-admin-2.min.js (59.22.177.6) 0.53ms
+[I 12:03:05.798 NotebookApp] 302 GET /files/static3/vendor/chart.js/Chart.min.js (59.22.177.6) 0.49ms
+[I 12:03:05.798 NotebookApp] 302 GET /files/static3/js/demo/chart-area-demo.js (59.22.177.6) 0.48ms
+[I 12:03:05.800 NotebookApp] 302 GET /files/static3/js/demo/chart-pie-demo.js (59.22.177.6) 0.69ms
+[I 12:03:24.737 NotebookApp] Saving file at /static3/index.html
+[I 12:03:44.881 NotebookApp] Saving file at /static3/index.html
+[I 12:05:36.243 NotebookApp] Saving file at /static3/index.html
+[I 12:06:43.199 NotebookApp] Saving file at /static3/index.html
+[I 12:07:32.591 NotebookApp] Saving file at /static3/index.html
+[I 12:07:50.940 NotebookApp] Saving file at /static3/index.html
+[I 12:08:02.490 NotebookApp] Saving file at /static3/index.html
+[I 12:09:29.841 NotebookApp] Saving file at /static3/index.html
+[I 12:10:40.377 NotebookApp] Saving file at /static3/index.html
+[I 12:11:12.619 NotebookApp] Saving file at /static3/index.html
+[I 12:11:42.728 NotebookApp] Saving file at /static3/index.html
+[I 12:12:49.902 NotebookApp] Saving file at /static3/index.html
+[I 12:14:42.389 NotebookApp] Saving file at /static3/index.html
+[I 12:15:24.004 NotebookApp] Saving file at /static3/index.html
+[I 12:15:31.607 NotebookApp] Saving file at /static3/index.html
+[I 12:17:13.072 NotebookApp] Saving file at /static3/index.html
+[I 12:17:31.760 NotebookApp] Saving file at /static3/index.html
+[I 12:18:00.610 NotebookApp] Saving file at /static3/index.html
+[I 12:19:15.444 NotebookApp] Saving file at /static3/index.html
+[I 12:19:22.080 NotebookApp] Saving file at /static3/index.html
+[I 12:22:02.617 NotebookApp] Creating new directory in /static3
+[I 12:22:25.417 NotebookApp] Uploading file to /static3/img/99D89D3F5A4654AF13.jpg
+[I 12:22:53.069 NotebookApp] Saving file at /static3/index.html
+[I 12:22:57.287 NotebookApp] 302 GET /files/static3/img/word.jpg (59.22.177.6) 0.67ms
+[I 12:23:16.573 NotebookApp] Saving file at /static3/index.html
+[W 12:23:18.226 NotebookApp] 404 GET /img/word.jpg (59.22.177.6) 7.94ms referer=None
+[I 12:23:32.890 NotebookApp] Saving file at /static3/index.html
+[I 12:24:06.380 NotebookApp] Saving file at /static3/index.html
+[I 12:24:09.081 NotebookApp] 302 GET /files/static3/img/word.jpg (59.22.177.6) 0.69ms
+[I 12:24:57.301 NotebookApp] Saving file at /static3/index.html
+[I 12:25:00.226 NotebookApp] 302 GET /files/static3/word.jpg (59.22.177.6) 0.69ms
+[I 12:25:06.925 NotebookApp] Saving file at /static3/index.html
+[I 12:25:09.078 NotebookApp] 302 GET /files/static3/img/word.jpg (59.22.177.6) 0.69ms
+[I 12:25:14.876 NotebookApp] Saving file at /static3/index.html
+[I 12:25:16.641 NotebookApp] 302 GET /files/static3/img/word.jpg (59.22.177.6) 0.74ms
+[I 12:25:24.441 NotebookApp] Saving file at /static3/index.html
+[I 12:25:26.455 NotebookApp] 302 GET /files/static3/img/word.jpg (59.22.177.6) 0.70ms
+[I 12:26:03.318 NotebookApp] Saving file at /static3/index.html
+[I 12:27:23.043 NotebookApp] Saving file at /static3/index.html
+[I 12:27:25.016 NotebookApp] 302 GET /files/static3/img/word.jpg (59.22.177.6) 0.68ms
+[I 12:31:28.501 NotebookApp] Kernel started: 7ee62e91-a4db-47fb-b713-41d66b230c7f
+[W 12:31:28.519 NotebookApp] delete /lambda_crawer/Untitled.ipynb
+[I 12:32:35.909 NotebookApp] Uploading file to /static3/img/wordcloud.png
+[I 12:32:56.412 NotebookApp] Saving file at /static3/index.html
+[I 12:33:04.024 NotebookApp] 302 GET /files/static3/img/wordcloud.png (59.22.177.6) 0.63ms
+[I 12:33:06.279 NotebookApp] 302 GET /files/static3/img/wordcloud.png (59.22.177.6) 0.70ms
+[I 12:33:18.235 NotebookApp] Interrupted...
+[I 12:33:18.235 NotebookApp] Shutting down 1 kernel
+[I 12:33:18.439 NotebookApp] Kernel shutdown: 7ee62e91-a4db-47fb-b713-41d66b230c7f
+[I 12:34:07.027 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 12:34:07.027 NotebookApp] The Jupyter Notebook is running at:
+[I 12:34:07.027 NotebookApp] http://ip-172-31-34-72:8888/
+[I 12:34:07.027 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 12:34:07.032 NotebookApp] No web browser found: could not locate runnable browser.
+[I 12:34:09.378 NotebookApp] 302 GET /files/static3/img/wordcloud.png (59.22.177.6) 0.75ms
+[I 12:34:24.440 NotebookApp] New terminal with automatic name: 1
+[I 12:35:14.113 NotebookApp] Saving file at /static3/index.html
+[W 12:35:20.896 NotebookApp] 404 GET /srv/web_novel_analysis/static3/img/wordcloud.png (59.22.177.6) 7.07ms referer=None
+[I 12:37:58.003 NotebookApp] Saving file at /static3/index.html
+[I 12:39:23.476 NotebookApp] Saving file at /static3/index.html
+[I 12:39:55.786 NotebookApp] Saving file at /static3/index.html
+[I 12:43:49.954 NotebookApp] Saving file at /static3/index.html
+[I 12:45:26.534 NotebookApp] Saving file at /static3/index.html
+[I 12:46:03.973 NotebookApp] Saving file at /static3/index.html
+[I 12:47:01.841 NotebookApp] Saving file at /static3/index.html
+[I 12:48:21.260 NotebookApp] Saving file at /static3/index.html
+[I 12:50:47.378 NotebookApp] Saving file at /static3/index.html
+[I 12:51:05.581 NotebookApp] Saving file at /static3/index.html
+[I 12:55:09.721 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22vendor/fontawesome-free/css/all.min.css%22%20%%7D (59.22.177.6) 0.74ms
+[I 12:55:09.748 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22vendor/jquery/jquery.min.js%22%20%%7D (59.22.177.6) 0.66ms
+[I 12:55:09.749 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22css/sb-admin-2.min.css%22%20%%7D (59.22.177.6) 0.49ms
+[I 12:55:10.116 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22vendor/bootstrap/js/bootstrap.bundle.min.js%22%20%%7D (59.22.177.6) 0.73ms
+[I 12:55:10.117 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22vendor/jquery-easing/jquery.easing.min.js%22%20%%7D (59.22.177.6) 0.52ms
+[I 12:55:10.119 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22js/sb-admin-2.min.js%22%20%%7D (59.22.177.6) 0.48ms
+[I 12:55:10.317 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22vendor/chart.js/Chart.min.js%22%20%%7D (59.22.177.6) 0.73ms
+[I 12:55:10.324 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22js/demo/chart-area-demo.js%22%20%%7D (59.22.177.6) 0.57ms
+[I 12:55:10.325 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22js/demo/chart-pie-demo.js%22%20%%7D (59.22.177.6) 0.48ms
+[I 12:55:10.346 NotebookApp] 302 GET /files/joara/templates/joara/%7B%7B%20wordcloud%20%7D%7D (59.22.177.6) 0.68ms
+[I 12:55:10.347 NotebookApp] 302 GET /files/joara/templates/joara/%7B%%20static%20%22js/demo/chart-bar-demo.js%22%20%%7D (59.22.177.6) 0.50ms
+[I 12:55:10.410 NotebookApp] 302 GET /files/joara/templates/joara/%7B%7B%20pie_graph%20%7D%7D (59.22.177.6) 0.69ms
+[I 12:55:10.558 NotebookApp] 302 GET /files/joara/templates/joara/%7B%7B%20bar_graph%20%7D%7D (59.22.177.6) 0.68ms
+[I 12:57:46.668 NotebookApp] Saving file at /static3/index.html
+[I 12:58:24.392 NotebookApp] Saving file at /static3/index.html
+[I 12:59:15.751 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22vendor/fontawesome-free/css/all.min.css%22%20%%7D (59.22.177.6) 0.70ms
+[I 12:59:15.753 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22css/sb-admin-2.min.css%22%20%%7D (59.22.177.6) 0.49ms
+[I 12:59:16.001 NotebookApp] 302 GET /files/integration/templates/integration/%7B%7B%20wordcloud%20%7D%7D (59.22.177.6) 0.71ms
+[I 12:59:16.112 NotebookApp] 302 GET /files/integration/templates/integration/%7B%7B%20pie_graph%20%7D%7D (59.22.177.6) 0.69ms
+[I 12:59:16.147 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22vendor/jquery/jquery.min.js%22%20%%7D (59.22.177.6) 0.61ms
+[I 12:59:16.158 NotebookApp] 302 GET /files/integration/templates/integration/%7B%7B%20bar_graph%20%7D%7D (59.22.177.6) 0.48ms
+[I 12:59:16.187 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22vendor/bootstrap/js/bootstrap.bundle.min.js%22%20%%7D (59.22.177.6) 0.48ms
+[I 12:59:16.193 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22vendor/jquery-easing/jquery.easing.min.js%22%20%%7D (59.22.177.6) 0.48ms
+[I 12:59:16.208 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22js/sb-admin-2.min.js%22%20%%7D (59.22.177.6) 0.48ms
+[I 12:59:16.209 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22vendor/chart.js/Chart.min.js%22%20%%7D (59.22.177.6) 0.46ms
+[I 12:59:16.236 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22js/demo/chart-area-demo.js%22%20%%7D (59.22.177.6) 0.50ms
+[I 12:59:16.307 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22js/demo/chart-pie-demo.js%22%20%%7D (59.22.177.6) 0.70ms
+[I 12:59:16.393 NotebookApp] 302 GET /files/integration/templates/integration/%7B%%20static%20%22js/demo/chart-bar-demo.js%22%20%%7D (59.22.177.6) 0.51ms
+[I 13:01:58.007 NotebookApp] Creating new file in /integration/templates/integration
+[I 13:03:07.874 NotebookApp] Saving file at /integration/templates/integration/integraion.html
+[I 13:03:34.508 NotebookApp] Saving file at /integration/templates/integration/integraion.html
+[I 13:03:38.856 NotebookApp] Interrupted...
+[I 13:03:38.857 NotebookApp] Shutting down 0 kernels
+[I 13:05:52.425 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 13:05:52.425 NotebookApp] The Jupyter Notebook is running at:
+[I 13:05:52.425 NotebookApp] http://ip-172-31-34-72:8888/
+[I 13:05:52.425 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:05:52.430 NotebookApp] No web browser found: could not locate runnable browser.
+[E 13:06:11.881 NotebookApp] Uncaught exception PATCH /api/contents/static/index.html (59.22.177.6)
+    HTTPServerRequest(protocol='http', host='ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888', method='PATCH', uri='/api/contents/static/index.html', version='HTTP/1.1', remote_ip='59.22.177.6')
+    Traceback (most recent call last):
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/tornado/web.py", line 1703, in _execute
+        result = await result
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/tornado/gen.py", line 209, in wrapper
+        yielded = next(result)
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/handlers.py", line 125, in patch
+        model = yield maybe_future(cm.update(model, path))
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 296, in update
+        self.rename(path, new_path)
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 284, in rename
+        self.rename_file(old_path, new_path)
+      File "/home/ubuntu/novel/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 565, in rename_file
+        if os.path.exists(new_os_path) and not samefile(old_os_path, new_os_path):
+      File "/usr/lib/python3.6/genericpath.py", line 96, in samefile
+        s1 = os.stat(f1)
+    FileNotFoundError: [Errno 2] No such file or directory: '/srv/web_novel_analysis/static/index.html'
+[W 13:06:11.888 NotebookApp] Unhandled error
+[E 13:06:11.889 NotebookApp] {
+      "Host": "ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "29",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|8bfc3ed2|d8f10b88af63484bfe2d10ec503c263f|1610872024",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888",
+      "Referer": "http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree/static",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko,en;q=0.9",
+      "Cookie": "csrftoken=fIRafCZJ6Aj5jJBvNH8azkgn8LT4AtXdTLtulcDPcVCz1gZgsHtldunHzQkIG1Op; _xsrf=2|8bfc3ed2|d8f10b88af63484bfe2d10ec503c263f|1610872024; username-ec2-13-209-77-163-ap-northeast-2-compute-amazonaws-com-8888=\"2|1:0|10:1610872350|68:username-ec2-13-209-77-163-ap-northeast-2-compute-amazonaws-com-8888|44:MmJmODllNTUyZjJhNGU4MWIzMzMyYmJmMzQ0ZDNmNTg=|382bd35adf3565963f56e18c0dd4677156afb5aeaef2a523c211d34325fa2ce3\""
+    }
+[E 13:06:11.889 NotebookApp] 500 PATCH /api/contents/static/index.html (59.22.177.6) 8.05ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree/static
+[I 13:06:55.800 NotebookApp] Copying static/index2.html to /static
+[I 13:07:32.339 NotebookApp] Saving file at /static/index.html
+[I 13:07:35.269 NotebookApp] Interrupted...
+[I 13:07:35.269 NotebookApp] Shutting down 0 kernels
+[I 13:10:14.690 NotebookApp] The port 8888 is already in use, trying another port.
+[I 13:10:14.693 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 13:10:14.693 NotebookApp] The Jupyter Notebook is running at:
+[I 13:10:14.693 NotebookApp] http://ip-172-31-34-72:8889/
+[I 13:10:14.693 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:10:14.698 NotebookApp] No web browser found: could not locate runnable browser.
+[I 13:10:44.043 NotebookApp] The port 8888 is already in use, trying another port.
+[I 13:10:44.043 NotebookApp] The port 8889 is already in use, trying another port.
+[I 13:10:44.047 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 13:10:44.047 NotebookApp] The Jupyter Notebook is running at:
+[I 13:10:44.047 NotebookApp] http://ip-172-31-34-72:8890/
+[I 13:10:44.047 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:10:44.052 NotebookApp] No web browser found: could not locate runnable browser.
+[I 13:17:32.949 NotebookApp] Interrupted...
+[I 13:17:32.949 NotebookApp] Shutting down 0 kernels
+[I 13:17:40.878 NotebookApp] The port 8888 is already in use, trying another port.
+[I 13:17:40.878 NotebookApp] The port 8889 is already in use, trying another port.
+[I 13:17:40.881 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 13:17:40.882 NotebookApp] The Jupyter Notebook is running at:
+[I 13:17:40.882 NotebookApp] http://ip-172-31-34-72:8890/
+[I 13:17:40.882 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:17:40.887 NotebookApp] No web browser found: could not locate runnable browser.
+[I 13:19:38.081 NotebookApp] Interrupted...
+[I 13:19:38.082 NotebookApp] Shutting down 0 kernels
+[I 13:20:08.761 NotebookApp] The port 8888 is already in use, trying another port.
+[I 13:20:08.761 NotebookApp] The port 8889 is already in use, trying another port.
+[I 13:20:08.764 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis
+[I 13:20:08.764 NotebookApp] The Jupyter Notebook is running at:
+[I 13:20:08.765 NotebookApp] http://ip-172-31-34-72:8890/
+[I 13:20:08.765 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:20:08.769 NotebookApp] No web browser found: could not locate runnable browser.
+[I 13:21:16.211 NotebookApp] Interrupted...
+[I 13:21:16.212 NotebookApp] Shutting down 0 kernels
+[C 13:24:53.105 NotebookApp] received signal 15, stopping
+[I 13:24:53.106 NotebookApp] Shutting down 0 kernels

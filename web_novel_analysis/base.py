@@ -12,7 +12,8 @@ import os
 import boto3
 import pandas as pd
 from io import StringIO
-from pytz import timezone 
+from pytz import timezone
+import random
 
 #======== s3 모듈 ===========
 
@@ -50,7 +51,9 @@ def get_tags(data, ntags=50): #상위 50개만 추출
     data = data.title.values.tolist() + data.intro.tolist()
     
     for nov in data:
-            txt = txt + ' ' + nov
+        if type(nov) != str:
+                continue
+        txt = txt + ' ' + nov
     
     cleaned_text = hangul.sub(' ', txt)
     spliter = Twitter()
@@ -65,27 +68,32 @@ def get_tags(data, ntags=50): #상위 50개만 추출
     return return_dict
 
 def wordcloud(keyword):
-	wc = WordCloud(font_path='/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf',  
+    random.random()
+    r = random.randrange(1,4) 
+
+    season = ['spring', 'summer', 'copper', 'winter']
+    wc = WordCloud(font_path='/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf',  
             background_color='white', 
-            width=900, 
-            height=360, 
+            colormap = season[r],
+            width=1000, 
+            height=450, 
             max_words=100, 
             max_font_size=200, 
-    	)
+    )
 
-	try:
-		wc_img = wc.generate_from_frequencies(keyword)
-	except:
-		return 'null'
-	plt.figure(figsize=(12, 5))
-	plt.imshow(wc_img, interpolation='bilinear')
-	plt.axis("off")
-	image = io.BytesIO()
-	plt.savefig(image, format='png', bbox_inches='tight', pad_inches=0.1)
-	image.seek(0)  
-	string = base64.b64encode(image.read())
-	image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
-	return image_64
+    try:
+        wc_img = wc.generate_from_frequencies(keyword)
+    except:
+        return 'null'
+    plt.figure(figsize=(12, 5))
+    plt.imshow(wc_img, interpolation='bilinear')
+    plt.axis("off")
+    image = io.BytesIO()
+    plt.savefig(image, format='png', bbox_inches='tight', pad_inches=0.1)
+    image.seek(0)  
+    string = base64.b64encode(image.read())
+    image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)
+    return image_64
 
 def bar_graph(keyword):
 	try:
@@ -161,6 +169,22 @@ def filtering(request, db_name):
     start_day = int(start.strftime('%Y%m%d')) 
     
     return df[(start_day <= df['date']) & (df['date'] <= end_day) & (df['genre'].isin(genres))]
+
+# 전체 데이터에서 기간별로 불러오기 
+def get_weeks_data(term):
+    joara = read_data_from_s3('joara-tobe.csv')
+    bookpal = read_data_from_s3('bookpal-tobe.csv')
+    tocsoda_web = read_data_from_s3('tocsoda-tobe-web.csv')
+    tocsoda_free = read_data_from_s3('tocsoda-tobe-free.csv')
+
+    novel = pd.concat([joara,bookpal, tocsoda_web, tocsoda_free])
+
+    today = datetime.datetime.now(timezone('Asia/Seoul'))
+    start = today - datetime.timedelta(days = term-1) 
+    end_day = int(today.strftime('%Y%m%d')) 
+    start_day = int(start.strftime('%Y%m%d')) 
+    return novel[(start_day <= novel['date']) & (novel['date'] <= end_day)]
+
 
 # ========= 기타 유용한 모듈들 =========
 
