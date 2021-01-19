@@ -1,0 +1,10 @@
+[I 13:09:38.535 NotebookApp] Serving notebooks from local directory: /srv/web_novel_analysis/static
+[I 13:09:38.535 NotebookApp] The Jupyter Notebook is running at:
+[I 13:09:38.535 NotebookApp] http://ip-172-31-34-72:8888/
+[I 13:09:38.535 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 13:09:38.540 NotebookApp] No web browser found: could not locate runnable browser.
+[W 13:09:52.363 NotebookApp] 404 GET /api/contents/static?type=directory&_=1610887000948 (59.22.177.6): No such file or directory: static
+[W 13:09:52.363 NotebookApp] No such file or directory: static
+[W 13:09:52.364 NotebookApp] 404 GET /api/contents/static?type=directory&_=1610887000948 (59.22.177.6) 1.20ms referer=http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com:8888/tree
+[C 13:24:53.104 NotebookApp] received signal 15, stopping
+[I 13:24:53.113 NotebookApp] Shutting down 0 kernels
