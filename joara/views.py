@@ -22,6 +22,7 @@ def main(request):
 
 @csrf_exempt
 def result(request):
+    form = optionForm
 	#qs = TodayBest.objects.all()
 	filtered = filtering(request, 'joara-tobe.csv')
 	if filtered.empty:	
@@ -31,7 +32,8 @@ def result(request):
 	return render(request, 'joara/analysis.html', {
 	'wordcloud':wordcloud(w_keyword), 
 	'pie_graph':pie_graph(filtered),  
-	'bar_graph':bar_graph(b_keyword) 
+	'bar_graph':bar_graph(b_keyword), 
+    'form':form   
 	})
 
 	

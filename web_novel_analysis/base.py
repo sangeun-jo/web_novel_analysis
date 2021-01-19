@@ -73,10 +73,11 @@ def wordcloud(keyword):
 
     season = ['spring', 'summer', 'copper', 'winter']
     wc = WordCloud(font_path='/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf',  
-            background_color='white', 
+            mode = "RGBA", 
+            background_color=None, 
             colormap = season[r],
-            width=1000, 
-            height=450, 
+            width=700, 
+            height=400, 
             max_words=100, 
             max_font_size=200, 
     )
