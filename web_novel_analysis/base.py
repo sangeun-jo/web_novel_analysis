@@ -73,8 +73,7 @@ def wordcloud(keyword):
 
     season = ['spring', 'summer', 'copper', 'winter']
     wc = WordCloud(font_path='/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf',  
-            mode = "RGBA", 
-            background_color=None, 
+            background_color='#e9ecef', 
             colormap = season[r],
             width=700, 
             height=400, 
@@ -90,7 +89,7 @@ def wordcloud(keyword):
     plt.imshow(wc_img, interpolation='bilinear')
     plt.axis("off")
     image = io.BytesIO()
-    plt.savefig(image, format='png', bbox_inches='tight', pad_inches=0.1)
+    plt.savefig(image, format='png', bbox_inches='tight', pad_inches=0)
     image.seek(0)  
     string = base64.b64encode(image.read())
     image_64 = 'data:image/png;base64,' + urllib.parse.quote(string)

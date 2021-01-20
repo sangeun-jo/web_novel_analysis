@@ -113,10 +113,10 @@
                                 <i class="bi bi-plus-circle"></i> 
                                 Analysis Conditions</a>
                            </div>
-                           <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                           <div id="collapseOne" class="collapse hide" data-parent="#accordion">
                              <div class="card-body">
                                  <div>
-                                     <form action='results' method="post">
+                                     <form action='analysis' method="post">
                                          <div class="row">
                                              <div class="col-md-8"> 
                                                 <p><b>장르</b></p>  
@@ -221,17 +221,9 @@
             <div class="col-lg-3">
             <div class="bs-component">
               <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                <a href="#" class="list-group-item list-group-item-action disabled"> </a>
-                  
+                {% for keyword in top_keys %}
+                <a href="#" class="list-group-item list-group-item-action disabled">{{ keyword }} </a>
+                {% endfor %}  
               </div>
             </div>
           </div>  

@@ -23,17 +23,30 @@ def main(request):
 @csrf_exempt
 def result(request):
     form = optionForm
-	#qs = TodayBest.objects.all()
-	filtered = filtering(request, 'joara-tobe.csv')
-	if filtered.empty:	
-		return render(request, 'joara/analysis.html', {'none':'검색결과가 없습니다.'})
-	w_keyword = get_tags(filtered)
-	b_keyword = get_tags(filtered, 20)
-	return render(request, 'joara/analysis.html', {
-	'wordcloud':wordcloud(w_keyword), 
-	'pie_graph':pie_graph(filtered),  
-	'bar_graph':bar_graph(b_keyword), 
-    'form':form   
-	})
+    filtered = filtering(request, 'joara-tobe.csv')
+    if filtered.empty:
+        return render(request, 'joara/analysis.html', {'none':'검색결과가 없습니다.'})
+    w_keyword = get_tags(filtered)
+    b_keyword = get_tags(filtered, 20)
+    return render(request, 'joara/analysis.html', {
+    'wordcloud':wordcloud(w_keyword), 
+    'pie_graph':pie_graph(filtered),  
+    'bar_graph':bar_graph(b_keyword), 
+    'form':form, 
+    })
 
-	
+@csrf_exempt
+def results(request):
+    form = optionForm
+    filtered = filtering(request, 'joara-tobe.csv')
+    if filtered.empty:
+        return render(request, 'joara/results.html', {'none':'검색결과가 없습니다.'})
+    w_keyword = get_tags(filtered)
+    top_ten = get_tags(filtered, 10)
+    top_keys = top_ten.keys()
+    top_items = top_ten.items()
+    return render(request, 'joara/results.html', {
+        'form':form,
+        'wordcloud':wordcloud(w_keyword), 
+        'top_keys':top_keys, 
+        'top_items':top_items}) 
