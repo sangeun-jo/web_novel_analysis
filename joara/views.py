@@ -13,11 +13,6 @@ from django.http import HttpResponse
 
 def main(request):
 	form = optionForm
-	#qs = TodayBest.objects.all()
-	#defalt_wc = wordcloud(qs)
-	#defalt_pie = pie_graph(qs)
-	#defalt_bar = bar_graph(qs)
-	#return render(request, 'joara/analysis.html', {'form':form, 'wordcloud': defalt_wc, 'pie_graph':defalt_pie, 'bar_graph':defalt_bar})
 	return render(request, 'joara/analysis.html', {'form':form })
 
 @csrf_exempt
@@ -27,11 +22,8 @@ def result(request):
     if filtered.empty:
         return render(request, 'joara/analysis.html', {'none':'검색결과가 없습니다.'})
     w_keyword = get_tags(filtered)
-    b_keyword = get_tags(filtered, 20)
     return render(request, 'joara/analysis.html', {
     'wordcloud':wordcloud(w_keyword), 
-    'pie_graph':pie_graph(filtered),  
-    'bar_graph':bar_graph(b_keyword), 
     'form':form, 
     })
 

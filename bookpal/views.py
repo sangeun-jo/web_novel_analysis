@@ -9,23 +9,34 @@ from web_novel_analysis.base import search
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 
-
 def main(request):
 	form = optionForm
 	return render(request, 'bookpal/analysis.html', {'form':form })
 
 @csrf_exempt
 def result(request):
-	filtered = filtering(request, 'bookpal-tobe.csv')
-	if filtered.empty:	
-		return render(request, 'bookpal/analysis.html', {'none':'검색결과가 없습니다.'})
-	w_keyword = get_tags(filtered)
-	b_keyword = get_tags(filtered, 20)
+    form = optionForm
+    filtered = filtering(request, 'bookpal-tobe.csv')
+    if filtered.empty:
+        return render(request, 'bookpal/analysis.html', {'none':'검색결과가 없습니다.'})
+    w_keyword = get_tags(filtered)
+    return render(request, 'bookpal/analysis.html', {
+    'wordcloud':wordcloud(w_keyword), 
+    'form':form, 
+    })
 
-	# 객체 반환
-	return render(request, 'bookpal/analysis.html', {
-		'wordcloud':wordcloud(w_keyword), 
-		'pie_graph':pie_graph(filtered),  
-		'bar_graph':bar_graph(b_keyword)
-	})
-	
+@csrf_exempt
+def results(request):
+    form = optionForm
+    filtered = filtering(request, 'bookpal-tobe.csv')
+    if filtered.empty:
+        return render(request, 'bookpal/results.html', {'none':'검색결과가 없습니다.'})
+    w_keyword = get_tags(filtered)
+    top_ten = get_tags(filtered, 10)
+    top_keys = top_ten.keys()
+    top_items = top_ten.items()
+    return render(request, 'bookpal/results.html', {
+        'form':form,
+        'wordcloud':wordcloud(w_keyword), 
+        'top_keys':top_keys, 
+        'top_items':top_items}) 

@@ -55,18 +55,6 @@
             <li class="nav-item">
               <a class="nav-link" href="https://blog.bootswatch.com/">About</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Cosmo <span class="caret"></span></a>
-              <div class="dropdown-menu" aria-labelledby="download">
-                <a class="dropdown-item" rel="noopener" target="_blank" href="https://jsfiddle.net/bootswatch/h3fgn55j/">Open in JSFiddle</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../4/cosmo/bootstrap.min.css" download>bootstrap.min.css</a>
-                <a class="dropdown-item" href="../4/cosmo/bootstrap.css" download>bootstrap.css</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../4/cosmo/_variables.scss" download>_variables.scss</a>
-                <a class="dropdown-item" href="../4/cosmo/_bootswatch.scss" download>_bootswatch.scss</a>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -74,35 +62,7 @@
       
       
     <div style="margin-top:85px;"/>    
-      
-    <div class="container">
-    
-
-      <!-- Containers
-      ================================================== -->
-        
-        <!--
-        <div class="bs-cocs-section">
-            <div class="row">  
-                <div id="accordion">
-                    <div class="card"> 
-                        <div class="card-header"> 
-                            <a style="display: block; text-decoration: none;" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="bi bi-plus-circle"></i> Analysis Conditions</a>
-                        </div>  
-                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                            <div class="card-body">
-                                <div>어쩌구 저쩌구 </div>
-                            </div>
-                        </div>
-                            
-                    </div>
-                </div>    
-            </div>        
-        </div>
-        -->
-        
-        
-        
+    <div class="container">        
         <div class="bs-cocs-section">
             <div class="row"> 
                <div class="col-md-12">
@@ -110,7 +70,6 @@
                         <div class="card"> 
                            <div class="card-header"> 
                              <a style="display: block; text-decoration: none;" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="bi bi-plus-circle"></i> 
                                 Analysis Conditions</a>
                            </div>
                            <div id="collapseOne" class="collapse hide" data-parent="#accordion">
@@ -145,58 +104,6 @@
             </div>       
         </div>
         
-        
-        
-        <!--
-        <div class="bs-cocs-section">
-            <div class="row">
-                
-                <div class="col-lg-6">
-                        <div class="card border-primary mb-3" style="max-width: 40rem;">
-                            <div class="card-header">Genre</div>
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>  
-                </div>
-                
-                <div class="col-lg-3">
-                        <div class="card border-primary mb-3" style="max-width: 20rem;">
-                            <div class="card-header">Term</div>
-                            <div class="card-body">
-                                <div class="form-check">
-                                  <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                        1 Day
-                                  </label> 
-                                </div>
-                                <div class="form-check">
-                                  <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option1" >
-                        1 Week
-                                  </label> 
-                                </div>
-                                <div class="form-check">
-                                  <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option1">
-                        1 Month
-                                  </label> 
-                                </div>
-                            </div>
-                        </div>  
-                </div>
-                
-                   
-            
-                
-
-            </div> 
-            
-    
-           
-            <div style="margin-bottom:20px;"/>
-        </div> 
-        -->
  
       <div style="margin-bottom:30px;"></div>
           
@@ -209,20 +116,13 @@
                  <img style="display: block; margin: 0px auto;float:center;"  src='{{ wordcloud }}'> 
                 </div>
             </ol>
-            <!--  
-            <div class="bs-component">
-              <div class="jumbotron"> 
-                  <img style="display: block; margin: 0px auto;"  src='https://user-images.githubusercontent.com/63631604/104938908-13db5b80-59f3-11eb-96cd-e3f836f11714.png'> 
-              </div>
-            
-            </div>
--->
+          
           </div>
             <div class="col-lg-3">
             <div class="bs-component">
               <div class="list-group">
                 {% for keyword in top_keys %}
-                <a href="#" class="list-group-item list-group-item-action disabled">{{ keyword }} </a>
+                <a href="#" class="list-group-item list-group-item-action disabled">{{ keyword }}</a>
                 {% endfor %}  
               </div>
             </div>
@@ -232,32 +132,20 @@
          
           
       </div> 
-        
+    </div>  
  
     </div>
       
       
     <footer class="container-fluid bg-4 text-center"> <p style="float:center;">Copyright &copy; 2021 SangEun.JO </p></footer>
       
+      
+      
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-        <script>
-    
-    jQuery(document).ready(function() {
-      if(window.location.href == 'http://ec2-13-209-77-163.ap-northeast-2.compute.amazonaws.com/joara/') {
-         $("#modal").show();
-      }
-    });
-    
-
-    function closeModal() {
-      $('.searchModal').hide();
-    };
-  </script>
-
-  <script type="text/javascript">
+    <script type="text/javascript">
     $(function(){
       $("#checkAll").click(function(){
         
@@ -270,7 +158,7 @@
         }
       });
     }); 
-  </script>
+  </script>   
       
   </body>
 </html>

@@ -61,10 +61,11 @@ def get_tags(data, ntags=50): #상위 50개만 추출
     nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
     count = Counter(nouns)
     return_dict = {}
-    
+       
     for n, c in count.most_common(ntags):
         if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']:
             return_dict[n] = c
+    
     return return_dict
 
 def wordcloud(keyword):

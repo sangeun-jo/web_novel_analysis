@@ -11,7 +11,9 @@ from web_novel_analysis.base import wordcloud, get_tags
 
 def home(request): 
     
-    #filtered = get_weeks_data(7); 
-    #w_keyword = get_tags(filtered, 100) 
-    #return render(request, 'index.html', {'wordcloud':wordcloud(w_keyword)})
-    return render(request, 'index.html')
+    filtered = get_weeks_data(7); 
+    w_keyword = get_tags(filtered) 
+    top_ten = get_tags(filtered, 10)
+    top_keys = top_ten.keys()
+    return render(request, 'index.html', {'wordcloud':wordcloud(w_keyword), 'top_keys':top_keys})
+    #return render(request, 'index.html')
