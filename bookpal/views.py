@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import TodayBest
 from .forms import optionForm
 from web_novel_analysis.base import pie_graph, bar_graph
-from web_novel_analysis.base import wordcloud, get_tags
+from web_novel_analysis.base import wordcloud, get_tags, get_keys
 from web_novel_analysis.base import filtering
 from web_novel_analysis.base import get_str_date
 from web_novel_analysis.base import search
@@ -32,11 +32,8 @@ def results(request):
     if filtered.empty:
         return render(request, 'bookpal/results.html', {'none':'검색결과가 없습니다.'})
     w_keyword = get_tags(filtered)
-    top_ten = get_tags(filtered, 10)
-    top_keys = top_ten.keys()
-    top_items = top_ten.items()
+    top_ten = get_keys(filtered, 10)
     return render(request, 'bookpal/results.html', {
         'form':form,
         'wordcloud':wordcloud(w_keyword), 
-        'top_keys':top_keys, 
-        'top_items':top_items}) 
+        'top_keys':top_ten}) 

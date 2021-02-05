@@ -60,14 +60,40 @@ def get_tags(data, ntags=50): #상위 50개만 추출
     nouns = spliter.nouns(cleaned_text)
     nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
     count = Counter(nouns)
+    
     return_dict = {}
-       
     for n, c in count.most_common(ntags):
         if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']:
             return_dict[n] = c
     
     return return_dict
 
+
+def get_keys(data, ntags=50): #상위 50개만 추출
+    hangul = re.compile('[^ a-zA-Z0-9ㄱ-ㅣ가-힣]+') 
+
+    txt = ''
+
+    data = data.title.values.tolist() + data.intro.tolist()
+    
+    for nov in data:
+        if type(nov) != str:
+                continue
+        txt = txt + ' ' + nov
+    
+    cleaned_text = hangul.sub(' ', txt)
+    spliter = Twitter()
+    nouns = spliter.nouns(cleaned_text)
+    nouns = [n for n in nouns if len(n) > 1] #한글자 단어 삭제 
+    nouns = [n for n in nouns if n not in ['표지', '소설', '여주', '그녀', '사람', '연재', '무료', '신작']]
+    count = Counter(nouns)
+    return_list = []
+    
+    for n, c in count.most_common(ntags):
+        return_list.append(n)
+    return return_list
+
+    
 def wordcloud(keyword):
     random.random()
     r = random.randrange(1,4) 
