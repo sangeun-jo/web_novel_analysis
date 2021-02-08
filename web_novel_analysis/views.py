@@ -14,6 +14,4 @@ def home(request):
     filtered = get_weeks_data(7); 
     w_keyword = get_tags(filtered) 
     top_ten = get_keys(filtered, 10)
-    #top_keys = top_ten.keys()
     return render(request, 'index.html', {'wordcloud':wordcloud(w_keyword), 'top_keys':top_ten})
-    #return render(request, 'index.html')
