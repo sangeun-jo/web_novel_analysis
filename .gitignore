@@ -1,3 +1,10 @@
 *.ipynb
 .ipynb_checkpoints/
 nohup.out
+relation/
+munpia/
+comment/
+integration/
+debug.log
+nano.save
+nohup.out
